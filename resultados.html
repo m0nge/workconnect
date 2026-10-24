@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resultados de búsqueda · WorkConnect</title>
+<meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador.">
+<link rel="icon" type="image/png" href="assets/icono.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="p02">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header id="site-header"></header>
+<main id="main">
+<div class="wrap">
+<div class="page-head"><span class="eyebrow"><span class="p">P02</span>Resultados de búsqueda</span><h1>Empleos disponibles</h1><p>Filtra por ubicación, experiencia, salario, sector, modalidad y contrato.</p></div>
+<div class="results-layout">
+  <form id="filters" class="filters card" novalidate>
+    <h3>Filtros</h3>
+    <div class="field"><label for="r-q">Cargo o palabra clave</label><input id="r-q" name="q" type="search" placeholder="Ej. Analista"></div>
+    <div class="field"><label for="r-loc">Ubicación</label><select id="r-loc" name="loc"></select></div>
+    <div class="field"><label for="r-exp">Experiencia</label><select id="r-exp" name="exp"></select></div>
+    <div class="field"><label for="r-sal">Salario</label><select id="r-sal" name="sal"></select></div>
+    <div class="field"><label for="r-sector">Sector</label><select id="r-sector" name="sector"></select></div>
+    <div class="field"><label for="r-mod">Modalidad</label><select id="r-mod" name="modality"></select></div>
+    <div class="field"><label for="r-con">Contrato</label><select id="r-con" name="contract"></select></div>
+    <button id="clear-filters" class="btn btn-ghost btn-block" type="button">Limpiar filtros</button>
+  </form>
+  <section aria-label="Resultados">
+    <div class="results-bar">
+      <strong id="count" aria-live="polite"></strong>
+      <div class="flex"><label class="small muted" for="sort">Ordenar por</label>
+        <select id="sort"><option value="rec">Más recientes</option><option value="sal">Mayor salario</option></select></div>
+    </div>
+    <div id="active-filters" class="chips" style="margin-bottom:16px"></div>
+    <div id="results" class="job-list"></div>
+  </section>
+</div>
+</div>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/portal.js"></script>
+<script src="js/cuentas.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

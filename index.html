@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inicio · WorkConnect</title>
+<meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador.">
+<link rel="icon" type="image/png" href="assets/icono.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="p01">
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header id="site-header"></header>
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="p">P01</span>Portal de empleos de El Salvador</span>
+      <h1>Conectando talento con <em>oportunidades.</em></h1>
+      <p class="lead">Explora vacantes verificadas, postúlate en minutos y da seguimiento a cada proceso desde un solo lugar.</p>
+      <div class="hero-links"><span>Explora por sector:</span><span id="sector-links" style="display:contents"></span></div>
+    </div>
+    <form id="search-form" class="search-card" novalidate>
+      <h2>Encuentra tu próximo empleo</h2>
+      <div class="form-grid">
+        <div class="field full"><label for="f-q">Cargo o palabra clave</label><input id="f-q" name="q" type="search" placeholder="Ej. Contador, soporte, ventas"></div>
+        <div class="field full"><label for="f-loc">Ubicación</label><select id="f-loc" name="loc"></select></div>
+      </div>
+      <div id="adv-panel" class="adv-panel hidden">
+        <div class="field"><label for="f-sal">Salario</label><select id="f-sal" name="sal"></select></div>
+        <div class="field"><label for="f-exp">Experiencia</label><select id="f-exp" name="exp"></select></div>
+        <div class="field"><label for="f-con">Contrato</label><select id="f-con" name="con"></select></div>
+      </div>
+      <div class="flex" style="margin-top:18px;justify-content:space-between">
+        <button id="adv-toggle" class="btn btn-ghost btn-sm" type="button" aria-expanded="false" aria-controls="adv-panel">Mostrar filtros avanzados</button>
+        <button class="btn btn-primary" type="submit">Buscar empleos</button>
+      </div>
+    </form>
+  </div>
+</section>
+<section class="wrap"><div id="metrics" class="metrics"></div></section>
+<section class="section wrap">
+  <div class="section-head"><div><h2>Vacantes destacadas</h2><p class="muted">Oportunidades recientes de empresas verificadas.</p></div><a class="btn btn-ghost" href="resultados.html">Ver todas las vacantes</a></div>
+  <div id="featured-jobs" class="jobs-grid"></div>
+</section>
+<section class="wrap" style="padding-bottom:72px">
+  <div class="cta-band">
+    <div><h2>¿Contratas talento?</h2><p>Publica tus vacantes, recibe postulaciones y gestiona cada etapa del proceso.</p></div>
+    <a class="btn btn-primary" href="login.html?tab=registro&amp;rol=empresa">Registrar mi empresa</a>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/portal.js"></script>
+<script src="js/cuentas.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
