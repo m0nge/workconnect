@@ -6,33 +6,33 @@
 <title>Registro e inicio de sesión · WorkConnect</title>
 <meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador.">
 <link rel="icon" type="image/png" href="assets/icono.png">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/estilos.css">
 </head>
-<body data-page="p06">
-<a class="skip-link" href="#main">Saltar al contenido</a>
-<header id="site-header"></header>
-<main id="main">
-<div class="auth-wrap">
-  <aside class="auth-side">
+<body>
+<a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
+<header class="cabecera-sitio"><div class="contenedor barra"><a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38"></a><nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal"><a href="resultados.html">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html">Foros</a><a href="login.html#registro">Para empresas</a></nav><div class="acciones-cabecera"><a class="boton boton-contorno boton-pequeno boton-indice" href="index.html">P01–P15</a><a class="boton boton-contorno boton-pequeno" href="login.html#ingresar">Ingresar</a><a class="boton boton-principal boton-pequeno" href="login.html#registro">Registrarse</a><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button></div></div></header>
+<main id="contenido-principal">
+<div class="envoltura-acceso">
+  <aside class="lateral-acceso">
     <div style="position:relative;z-index:1">
-      <span class="eyebrow" style="color:#e7c3c8"><span class="p">P06</span>Acceso</span>
+      <span class="sobretitulo" style="color:#e7c3c8"><span class="pantalla">P06</span>Acceso</span>
       <h1>Tu próximo paso empieza aquí.</h1>
       <p>Crea tu cuenta como candidato o como empresa, o ingresa para continuar donde te quedaste.</p>
     </div>
-    <div class="demo-box">
+    <div class="caja-demostracion">
       <h3>Acceso de demostración</h3>
-      <button class="btn btn-sm" type="button" data-demo-login="candidato">Candidato</button><button class="btn btn-sm" type="button" data-demo-login="empresa">Empresa</button><button class="btn btn-sm" type="button" data-demo-login="admin">Administrador</button>
+      <span class="boton boton-pequeno">Candidato</span><span class="boton boton-pequeno">Empresa</span><span class="boton boton-pequeno">Administrador</span>
       <p style="font-size:.8rem;margin-top:6px"><code>candidato@workconnect.sv</code> · <code>Demo1234</code><br><code>empresa@workconnect.sv</code> · <code>Demo1234</code><br><code>admin@workconnect.sv</code> · <code>Admin1234</code></p>
     </div>
   </aside>
-  <section class="auth-main"><div class="auth-form" id="auth-forms"></div></section>
+  <section class="contenido-acceso"><div class="formulario-acceso">
+    <div class="pestanas" role="tablist" aria-label="Acceso"><button class="pestana" role="tab" data-pestana-formulario="ingresar" aria-selected="true">Iniciar sesión</button><button class="pestana" role="tab" data-pestana-formulario="registro" aria-selected="false">Crear cuenta</button></div>
+    <section id="panel-ingresar" data-panel-formulario="ingresar"><form class="columna acceso-estatico"><div class="campo"><label for="correo-acceso">Correo electrónico</label><input id="correo-acceso" type="email" autocomplete="username" placeholder="nombre@correo.com"></div><div class="campo"><label for="clave-acceso">Contraseña</label><input id="clave-acceso" type="password" autocomplete="current-password"></div><button class="boton boton-principal boton-ancho" type="submit">Iniciar sesión</button><p class="pequeno atenuado">¿Aún no tienes cuenta? <button class="enlace" type="button" data-pestana-formulario="registro">Regístrate</button></p></form></section>
+    <section id="panel-registro" data-panel-formulario="registro" hidden><form class="columna acceso-estatico"><div class="campo"><span class="etiqueta-campo">Quiero registrarme como</span><div class="selector-rol"><button class="opcion-rol" type="button" data-rol="candidato" aria-pressed="true"><strong>Candidato/a</strong><span>Busco empleo</span></button><button class="opcion-rol" type="button" data-rol="empresa" aria-pressed="false"><strong>Empresa</strong><span>Quiero contratar</span></button></div></div><div class="campo"><label for="nombre-registro">Nombre completo</label><input id="nombre-registro" type="text" autocomplete="name"></div><div class="campo campo-empresa" hidden><label for="sector-registro">Sector</label><select id="sector-registro"><option value="">Selecciona</option><option>Tecnología</option><option>Finanzas</option><option>Logística</option><option>Agroindustria</option><option>Salud</option><option>Manufactura</option><option>Turismo</option><option>Comercio</option><option>Educación</option><option>Administración</option><option>Construcción</option></select></div><div class="campo"><label for="correo-registro">Correo electrónico</label><input id="correo-registro" type="email" autocomplete="email" placeholder="nombre@correo.com"></div><div class="rejilla-formulario"><div class="campo"><label for="clave-registro">Contraseña</label><input id="clave-registro" type="password" autocomplete="new-password"><span class="ayuda">Mínimo 8 caracteres, con letras y números.</span></div><div class="campo"><label for="confirmar-clave">Confirmar contraseña</label><input id="confirmar-clave" type="password" autocomplete="new-password"></div></div><label class="casilla"><input type="checkbox"> <span>Acepto los términos de uso y la política de privacidad del portal.</span></label><button class="boton boton-principal boton-ancho" type="submit">Crear cuenta</button><p class="pequeno atenuado">¿Ya tienes cuenta? <button class="enlace" type="button" data-pestana-formulario="ingresar">Inicia sesión</button></p></form></section>
+  </div></section>
 </div>
 </main>
-<footer id="site-footer"></footer>
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
-<script src="js/portal.js"></script>
-<script src="js/cuentas.js"></script>
-<script src="js/admin.js"></script>
+<footer class="pie-sitio"><div class="contenedor"><div class="rejilla-pie"><div><img src="assets/logo.png" alt="WorkConnect"><p class="atenuado pequeno" style="max-width:300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p></div><div><h4>Candidatos</h4><ul><li><a href="resultados.html">Buscar empleo</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="foros.html">Foros</a></li><li><a href="candidato.html">Mi perfil</a></li></ul></div><div><h4>Empresas</h4><ul><li><a href="publicar-vacante.html">Publicar vacante</a></li><li><a href="postulaciones.html">Postulaciones</a></li><li><a href="empresas.html">Mi empresa</a></li><li><a href="login.html#registro">Registrar empresa</a></li></ul></div><div><h4>Portal</h4><ul><li><a href="login.html#ingresar">Ingresar</a></li><li><a href="admin-dashboard.html">Administración</a></li><li><a href="index.html">Índice P01–P15</a></li></ul></div></div><div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div></div></footer>
+<script src="js/interacciones.js"></script>
 </body>
 </html>

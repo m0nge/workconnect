@@ -23,7 +23,7 @@
 
 /* 2. BASE */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: auto; }
 body {
   margin: 0;
   background: var(--bone);
@@ -61,7 +61,6 @@ button { font: inherit; cursor: pointer; }
   min-height: 42px; padding: 0 18px; border-radius: var(--radius);
   border: 1px solid transparent; font-weight: 600; font-size: 0.93rem;
   text-decoration: none; background: transparent; color: var(--carbon);
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 .btn-primary { background: var(--wine); color: var(--bone); }
 .btn-primary:hover { background: var(--wine-dark); }
@@ -150,7 +149,7 @@ td .actions { display: flex; gap: 6px; flex-wrap: wrap; }
 .stars .off { color: var(--sand-dark); }
 
 .progress { height: 8px; background: var(--sand); border-radius: 99px; overflow: hidden; }
-.progress > span { display: block; height: 100%; background: var(--wine); border-radius: 99px; transition: width 0.3s; }
+.progress > span { display: block; height: 100%; background: var(--wine); border-radius: 99px; }
 
 /* Modal y avisos */
 .overlay { position: fixed; inset: 0; background: rgba(31, 31, 35, 0.58); display: flex; align-items: flex-start; justify-content: center; padding: 6vh 16px 16px; overflow-y: auto; z-index: 100; }
@@ -163,10 +162,9 @@ td .actions { display: flex; gap: 6px; flex-wrap: wrap; }
 .dialog-body { padding: 24px; }
 .dialog-foot { display: flex; justify-content: flex-end; gap: 10px; padding: 16px 24px; border-top: 1px solid var(--sand); background: var(--warm); border-radius: 0 0 var(--radius-lg) var(--radius-lg); flex-wrap: wrap; }
 .toasts { position: fixed; top: 84px; right: 16px; display: flex; flex-direction: column; gap: 10px; z-index: 150; max-width: min(380px, calc(100vw - 32px)); }
-.toast { background: var(--carbon); color: var(--bone); padding: 13px 16px; border-radius: var(--radius); border-left: 4px solid var(--sand); font-size: 0.9rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); animation: toast-in 0.2s ease-out; }
+.toast { background: var(--carbon); color: var(--bone); padding: 13px 16px; border-radius: var(--radius); border-left: 4px solid var(--sand); font-size: 0.9rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); }
 .toast.ok { border-left-color: var(--bone); }
 .toast.err { border-left-color: var(--wine); background: #3a1a20; }
-@keyframes toast-in { from { opacity: 0; transform: translateY(-6px); } }
 
 dl.kv { display: grid; grid-template-columns: 130px 1fr; gap: 10px 16px; margin: 0; font-size: 0.92rem; }
 dl.kv dt { color: var(--muted); }
@@ -238,7 +236,7 @@ dl.kv dd { margin: 0; color: var(--carbon); font-weight: 500; }
 .metric span { font-size: 0.85rem; color: var(--muted); }
 
 .jobs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.job-card { background: var(--white); border: 1px solid var(--sand); border-radius: var(--radius-lg); padding: 22px; display: flex; flex-direction: column; gap: 14px; transition: border-color 0.15s; }
+.job-card { background: var(--white); border: 1px solid var(--sand); border-radius: var(--radius-lg); padding: 22px; display: flex; flex-direction: column; gap: 14px; }
 .job-card:hover { border-color: var(--carbon); }
 .job-top { display: flex; gap: 14px; align-items: flex-start; }
 .job-top h3 { font-size: 1.08rem; }
@@ -280,7 +278,7 @@ dl.kv dd { margin: 0; color: var(--carbon); font-weight: 500; }
 .rating-big { font-family: var(--serif); font-size: 2.6rem; line-height: 1; color: var(--carbon); }
 
 .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.res-card { background: var(--white); border: 1px solid var(--sand); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column; gap: 12px; text-align: left; transition: border-color 0.15s; }
+.res-card { background: var(--white); border: 1px solid var(--sand); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column; gap: 12px; text-align: left; }
 .res-card:hover { border-color: var(--wine); }
 .res-card h3 { font-size: 1.12rem; font-family: var(--serif); font-weight: 600; }
 .res-card p { color: var(--muted); font-size: 0.92rem; }
