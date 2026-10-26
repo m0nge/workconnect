@@ -1,45 +1,423 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Moderación de contenido · WorkConnect</title>
-<meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador.">
-<link rel="icon" type="image/png" href="assets/icono.png">
-<link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-<a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
-<header class="cabecera-sitio"><div class="contenedor barra"><a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38"></a><nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal"><a href="resultados.html">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html">Foros</a><a href="admin-dashboard.html" aria-current="page">Administración</a></nav><div class="acciones-cabecera"><a class="boton boton-contorno boton-pequeno boton-indice" href="index.html">P01–P15</a><a class="boton boton-contorno boton-pequeno" href="login.html">Ingresar</a><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button></div></div></header>
-<main id="contenido-principal">
-<div class="contenedor"><div class="panel-administracion"><aside class="navegacion-administracion" aria-label="Administración"><h4>Administración</h4><a href="admin-dashboard.html"><b>P11</b>Dashboard</a><a href="admin-usuarios.html"><b>P12</b>Usuarios</a><a href="admin-empresas.html"><b>P13</b>Empresas</a><a href="admin-vacantes.html"><b>P14</b>Vacantes</a><a href="admin-moderacion.html" aria-current="page"><b>P15</b>Moderación</a></aside><div><div class="encabezado-administracion"><span class="sobretitulo"><span class="pantalla">P15</span>Administración</span><h1>Moderación</h1><p>Aprueba, oculta o elimina foros, comentarios, valoraciones y reportes.</p></div><div class="pestanas" role="tablist"><button class="pestana" role="tab" data-categoria="todos" aria-selected="true">Todo · 3 pend.</button><button class="pestana" role="tab" data-categoria="foro" aria-selected="false">Foros</button><button class="pestana" role="tab" data-categoria="comentario" aria-selected="false">Comentarios</button><button class="pestana" role="tab" data-categoria="valoración" aria-selected="false">Valoraciones · 1 pend.</button><button class="pestana" role="tab" data-categoria="reporte" aria-selected="false">Reportes · 2 pend.</button></div>
-<div class="mod-list">
-<article class="elemento-moderacion" data-tipo="foro"><div><div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Tengo entrevista el jueves en una empresa de logística y siempre me trabo en esa pregunta. ¿Qué estructura usan ustedes?</p><p class="pequeno atenuado"><strong>¿Cómo responder a «hábleme de usted» sin sonar ensayado?</strong> · Lorena Chávez · 18 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="comentario"><div><div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Yo uso presente, pasado, futuro: qué hago hoy, qué he logrado y qué busco. Máximo dos minutos.</p><p class="pequeno atenuado"><strong>En «¿Cómo responder a «hábleme de usted» sin sonar ensayado?»</strong> · Ana Lucía Portillo · 18 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="comentario"><div><div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Prepara un logro con números. Por ejemplo, «reduje 15% el tiempo de despacho». Se recuerda más.</p><p class="pequeno atenuado"><strong>En «¿Cómo responder a «hábleme de usted» sin sonar ensayado?»</strong> · Óscar Amaya · 19 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="foro"><div><div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Estoy por recibir una oferta y quiero comparar. ¿Qué rangos ven para junior y semi senior en El Salvador?</p><p class="pequeno atenuado"><strong>Rangos salariales de desarrollo web en San Salvador 2026</strong> · Kevin Orellana · 16 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="comentario"><div><div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Junior entre $600 y $900; semi senior entre $1,100 y $1,700 según la empresa y si es trabajo remoto para el extranjero.</p><p class="pequeno atenuado"><strong>En «Rangos salariales de desarrollo web en San Salvador 2026»</strong> · José Roberto Alvarenga · 17 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="foro"><div><div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">¿Alguien sabe si habrá feria de empleo en San Miguel antes de diciembre? Busco oportunidades en ventas.</p><p class="pequeno atenuado"><strong>Ferias de empleo en el oriente del país</strong> · Mauricio Escobar · 15 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="foro"><div><div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Me gradúo en diciembre de Administración de Empresas y no tengo experiencia formal. ¿Pasantías, voluntariados, qué recomiendan?</p><p class="pequeno atenuado"><strong>Primer empleo sin experiencia: ¿por dónde empiezo?</strong> · Fátima Ayala · 13 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="comentario"><div><div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Las pasantías con constancia de horas sociales cuentan como experiencia. Inclúyelas en tu CV con resultados concretos.</p><p class="pequeno atenuado"><strong>En «Primer empleo sin experiencia: ¿por dónde empiezo?»</strong> · Beatriz Quintanilla · 14 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="comentario"><div><div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Postúlate también a puestos de asistente; son una buena puerta de entrada.</p><p class="pequeno atenuado"><strong>En «Primer empleo sin experiencia: ¿por dónde empiezo?»</strong> · Henry Rosales · 14 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="foro"><div><div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Estoy valorando certificaciones de gestión de proyectos. ¿Les han servido para crecer en empresas locales?</p><p class="pequeno atenuado"><strong>¿Vale la pena certificarse en gestión de proyectos?</strong> · Nancy Villalta · 11 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="foro"><div><div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Me contactaron por mensajería ofreciendo trabajo y pedían $30 para «uniforme». Les comparto para que estén alertas.</p><p class="pequeno atenuado"><strong>Cuidado con ofertas que piden dinero por adelantado</strong> · Andrea Cañas · 9 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="comentario"><div><div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Una empresa seria no cobra por contratar. Gracias por compartir.</p><p class="pequeno atenuado"><strong>En «Cuidado con ofertas que piden dinero por adelantado»</strong> · Luis Ernesto Peña · 10 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="valoración"><div><div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Buen ambiente y mucho aprendizaje. Los líderes técnicos acompañan de verdad.</p><p class="pequeno atenuado"><strong>Volcán Software · 5 de 5</strong> · Ricardo A. · 21 sep 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="valoración"><div><div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Proyectos retadores y flexibilidad. El proceso de selección es algo largo.</p><p class="pequeno atenuado"><strong>Volcán Software · 4 de 5</strong> · Elena M. · 27 ago 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="valoración"><div><div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Estabilidad y buenas prestaciones. Muy estructurado, a veces lento para cambiar.</p><p class="pequeno atenuado"><strong>Banco del Pacífico · 4 de 5</strong> · Pablo C. · 11 sep 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="valoración"><div><div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Buen salario pero los turnos pueden extenderse en temporada alta.</p><p class="pequeno atenuado"><strong>Logística Izalco · 3 de 5</strong> · Marcela R. · 29 sep 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="valoración"><div><div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Equipo humano cálido y capacitaciones constantes.</p><p class="pequeno atenuado"><strong>Clínica Santa Lucía · 5 de 5</strong> · Karla G. · 3 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="valoración"><div><div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-pendiente">Pendiente</span></div><p class="texto-moderacion">Metas muy altas y poca comunicación de cambios de ruta.</p><p class="pequeno atenuado"><strong>Distribuidora Oriental · 2 de 5</strong> · Anónimo · 12 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="valoración"><div><div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Cumplen con pagos y prestaciones; el trabajo es repetitivo.</p><p class="pequeno atenuado"><strong>Textiles San Marcos · 3 de 5</strong> · Julia S. · 16 sep 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="valoración"><div><div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Proceso de selección ordenado y respetuoso; me dieron respuesta en menos de dos semanas.</p><p class="pequeno atenuado"><strong>Banco del Pacífico · 4 de 5</strong> · María H. · 1 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="valoración"><div><div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Trato respetuoso con los cortadores y beneficios claros durante la cosecha.</p><p class="pequeno atenuado"><strong>Café Apaneca Export · 5 de 5</strong> · Samuel P. · 22 ago 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="reporte"><div><div class="flexible"><span class="etiqueta">reporte</span><span class="insignia insignia-pendiente">Pendiente</span></div><p class="texto-moderacion">Posible estafa: pide pago previo.</p><p class="pequeno atenuado"><strong>Oferta «Ganá $500 diarios desde casa»</strong> · Lorena Chávez · 19 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desestimar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar contenido</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="reporte"><div><div class="flexible"><span class="etiqueta">reporte</span><span class="insignia insignia-pendiente">Pendiente</span></div><p class="texto-moderacion">Lenguaje ofensivo hacia otro usuario.</p><p class="pequeno atenuado"><strong>Comentario en foro «Salarios»</strong> · Walter Cruz · 17 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desestimar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar contenido</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-<article class="elemento-moderacion" data-tipo="reporte"><div><div class="flexible"><span class="etiqueta">reporte</span><span class="insignia insignia-correcta">✓ Visible</span></div><p class="texto-moderacion">Contiene datos personales de un supervisor.</p><p class="pequeno atenuado"><strong>Valoración de Distribuidora Oriental</strong> · Sofía Barrera · 15 oct 2026</p></div><div class="acciones-moderacion"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desestimar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar contenido</button><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button></div></article>
-</div></div></div></div>
-</main>
-<footer class="pie-sitio"><div class="contenedor"><div class="rejilla-pie"><div><img src="assets/logo.png" alt="WorkConnect"><p class="atenuado pequeno" style="max-width:300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p></div><div><h4>Candidatos</h4><ul><li><a href="resultados.html">Buscar empleo</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="foros.html">Foros</a></li><li><a href="candidato.html">Mi perfil</a></li></ul></div><div><h4>Empresas</h4><ul><li><a href="publicar-vacante.html">Publicar vacante</a></li><li><a href="postulaciones.html">Postulaciones</a></li><li><a href="empresas.html">Mi empresa</a></li></ul></div><div><h4>Portal</h4><ul><li><a href="login.html">Ingresar</a></li><li><a href="admin-dashboard.html">Administración</a></li><li><a href="index.html">Índice P01–P15</a></li></ul></div></div><div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div></div></footer><div class="fondo-ventana oculto" id="demostracion"><section class="ventana" role="dialog" aria-modal="true" aria-labelledby="titulo-demostracion" tabindex="-1"><div class="encabezado-ventana"><h2 id="titulo-demostracion">Acción de demostración</h2><button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button></div><div class="contenido-ventana"><p>El contenido y sus estados son datos fijos y no se modifican.</p></div><div class="pie-ventana"><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button></div></section></div><script src="js/interacciones.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moderación de contenido · WorkConnect</title>
+    <meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador." />
+    <link rel="icon" type="image/png" href="assets/icono.png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
+    <header class="cabecera-sitio">
+      <div class="contenedor barra">
+        <a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38" /></a>
+        <nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal">
+          <a href="resultados.html">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html">Foros</a><a href="admin-dashboard.html" aria-current="page">Administración</a>
+        </nav>
+        <div class="acciones-cabecera">
+          <a class="boton boton-contorno boton-pequeno boton-indice" href="index.html">P01–P15</a><a class="boton boton-contorno boton-pequeno" href="login.html">Ingresar</a
+          ><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+    <main id="contenido-principal">
+      <div class="contenedor">
+        <div class="panel-administracion">
+          <aside class="navegacion-administracion" aria-label="Administración">
+            <h4>Administración</h4>
+            <a href="admin-dashboard.html"><b>P11</b>Dashboard</a><a href="admin-usuarios.html"><b>P12</b>Usuarios</a><a href="admin-empresas.html"><b>P13</b>Empresas</a><a href="admin-vacantes.html"><b>P14</b>Vacantes</a
+            ><a href="admin-moderacion.html" aria-current="page"><b>P15</b>Moderación</a>
+          </aside>
+          <div>
+            <div class="encabezado-administracion">
+              <span class="sobretitulo"><span class="pantalla">P15</span>Administración</span>
+              <h1>Moderación</h1>
+              <p>Aprueba, oculta o elimina foros, comentarios, valoraciones y reportes.</p>
+            </div>
+            <div class="pestanas" role="tablist">
+              <button class="pestana" role="tab" data-categoria="todos" aria-selected="true">Todo · 3 pend.</button><button class="pestana" role="tab" data-categoria="foro" aria-selected="false">Foros</button
+              ><button class="pestana" role="tab" data-categoria="comentario" aria-selected="false">Comentarios</button><button class="pestana" role="tab" data-categoria="valoración" aria-selected="false">Valoraciones · 1 pend.</button
+              ><button class="pestana" role="tab" data-categoria="reporte" aria-selected="false">Reportes · 2 pend.</button>
+            </div>
+            <div class="mod-list">
+              <article class="elemento-moderacion" data-tipo="foro">
+                <div>
+                  <div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Tengo entrevista el jueves en una empresa de logística y siempre me trabo en esa pregunta. ¿Qué estructura usan ustedes?</p>
+                  <p class="pequeno atenuado">
+                    <strong>¿Cómo responder a «hábleme de usted» sin sonar ensayado?</strong>
+                    · Lorena Chávez · 18 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="comentario">
+                <div>
+                  <div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Yo uso presente, pasado, futuro: qué hago hoy, qué he logrado y qué busco. Máximo dos minutos.</p>
+                  <p class="pequeno atenuado">
+                    <strong>En «¿Cómo responder a «hábleme de usted» sin sonar ensayado?»</strong>
+                    · Ana Lucía Portillo · 18 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="comentario">
+                <div>
+                  <div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Prepara un logro con números. Por ejemplo, «reduje 15% el tiempo de despacho». Se recuerda más.</p>
+                  <p class="pequeno atenuado">
+                    <strong>En «¿Cómo responder a «hábleme de usted» sin sonar ensayado?»</strong>
+                    · Óscar Amaya · 19 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="foro">
+                <div>
+                  <div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Estoy por recibir una oferta y quiero comparar. ¿Qué rangos ven para junior y semi senior en El Salvador?</p>
+                  <p class="pequeno atenuado">
+                    <strong>Rangos salariales de desarrollo web en San Salvador 2026</strong>
+                    · Kevin Orellana · 16 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="comentario">
+                <div>
+                  <div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Junior entre $600 y $900; semi senior entre $1,100 y $1,700 según la empresa y si es trabajo remoto para el extranjero.</p>
+                  <p class="pequeno atenuado">
+                    <strong>En «Rangos salariales de desarrollo web en San Salvador 2026»</strong>
+                    · José Roberto Alvarenga · 17 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="foro">
+                <div>
+                  <div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">¿Alguien sabe si habrá feria de empleo en San Miguel antes de diciembre? Busco oportunidades en ventas.</p>
+                  <p class="pequeno atenuado"><strong>Ferias de empleo en el oriente del país</strong> · Mauricio Escobar · 15 oct 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="foro">
+                <div>
+                  <div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Me gradúo en diciembre de Administración de Empresas y no tengo experiencia formal. ¿Pasantías, voluntariados, qué recomiendan?</p>
+                  <p class="pequeno atenuado">
+                    <strong>Primer empleo sin experiencia: ¿por dónde empiezo?</strong>
+                    · Fátima Ayala · 13 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="comentario">
+                <div>
+                  <div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Las pasantías con constancia de horas sociales cuentan como experiencia. Inclúyelas en tu CV con resultados concretos.</p>
+                  <p class="pequeno atenuado">
+                    <strong>En «Primer empleo sin experiencia: ¿por dónde empiezo?»</strong>
+                    · Beatriz Quintanilla · 14 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="comentario">
+                <div>
+                  <div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Postúlate también a puestos de asistente; son una buena puerta de entrada.</p>
+                  <p class="pequeno atenuado">
+                    <strong>En «Primer empleo sin experiencia: ¿por dónde empiezo?»</strong>
+                    · Henry Rosales · 14 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="foro">
+                <div>
+                  <div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Estoy valorando certificaciones de gestión de proyectos. ¿Les han servido para crecer en empresas locales?</p>
+                  <p class="pequeno atenuado">
+                    <strong>¿Vale la pena certificarse en gestión de proyectos?</strong>
+                    · Nancy Villalta · 11 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="foro">
+                <div>
+                  <div class="flexible"><span class="etiqueta">foro</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Me contactaron por mensajería ofreciendo trabajo y pedían $30 para «uniforme». Les comparto para que estén alertas.</p>
+                  <p class="pequeno atenuado">
+                    <strong>Cuidado con ofertas que piden dinero por adelantado</strong>
+                    · Andrea Cañas · 9 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="comentario">
+                <div>
+                  <div class="flexible"><span class="etiqueta">comentario</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Una empresa seria no cobra por contratar. Gracias por compartir.</p>
+                  <p class="pequeno atenuado">
+                    <strong>En «Cuidado con ofertas que piden dinero por adelantado»</strong>
+                    · Luis Ernesto Peña · 10 oct 2026
+                  </p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="valoración">
+                <div>
+                  <div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Buen ambiente y mucho aprendizaje. Los líderes técnicos acompañan de verdad.</p>
+                  <p class="pequeno atenuado"><strong>Volcán Software · 5 de 5</strong> · Ricardo A. · 21 sep 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="valoración">
+                <div>
+                  <div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Proyectos retadores y flexibilidad. El proceso de selección es algo largo.</p>
+                  <p class="pequeno atenuado"><strong>Volcán Software · 4 de 5</strong> · Elena M. · 27 ago 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="valoración">
+                <div>
+                  <div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Estabilidad y buenas prestaciones. Muy estructurado, a veces lento para cambiar.</p>
+                  <p class="pequeno atenuado"><strong>Banco del Pacífico · 4 de 5</strong> · Pablo C. · 11 sep 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="valoración">
+                <div>
+                  <div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Buen salario pero los turnos pueden extenderse en temporada alta.</p>
+                  <p class="pequeno atenuado"><strong>Logística Izalco · 3 de 5</strong> · Marcela R. · 29 sep 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="valoración">
+                <div>
+                  <div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Equipo humano cálido y capacitaciones constantes.</p>
+                  <p class="pequeno atenuado"><strong>Clínica Santa Lucía · 5 de 5</strong> · Karla G. · 3 oct 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="valoración">
+                <div>
+                  <div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-pendiente">Pendiente</span></div>
+                  <p class="texto-moderacion">Metas muy altas y poca comunicación de cambios de ruta.</p>
+                  <p class="pequeno atenuado"><strong>Distribuidora Oriental · 2 de 5</strong> · Anónimo · 12 oct 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="valoración">
+                <div>
+                  <div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Cumplen con pagos y prestaciones; el trabajo es repetitivo.</p>
+                  <p class="pequeno atenuado"><strong>Textiles San Marcos · 3 de 5</strong> · Julia S. · 16 sep 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="valoración">
+                <div>
+                  <div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Proceso de selección ordenado y respetuoso; me dieron respuesta en menos de dos semanas.</p>
+                  <p class="pequeno atenuado"><strong>Banco del Pacífico · 4 de 5</strong> · María H. · 1 oct 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="valoración">
+                <div>
+                  <div class="flexible"><span class="etiqueta">valoración</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Trato respetuoso con los cortadores y beneficios claros durante la cosecha.</p>
+                  <p class="pequeno atenuado"><strong>Café Apaneca Export · 5 de 5</strong> · Samuel P. · 22 ago 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="reporte">
+                <div>
+                  <div class="flexible"><span class="etiqueta">reporte</span><span class="insignia insignia-pendiente">Pendiente</span></div>
+                  <p class="texto-moderacion">Posible estafa: pide pago previo.</p>
+                  <p class="pequeno atenuado"><strong>Oferta «Ganá $500 diarios desde casa»</strong> · Lorena Chávez · 19 oct 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desestimar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar contenido</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="reporte">
+                <div>
+                  <div class="flexible"><span class="etiqueta">reporte</span><span class="insignia insignia-pendiente">Pendiente</span></div>
+                  <p class="texto-moderacion">Lenguaje ofensivo hacia otro usuario.</p>
+                  <p class="pequeno atenuado"><strong>Comentario en foro «Salarios»</strong> · Walter Cruz · 17 oct 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desestimar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar contenido</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+              <article class="elemento-moderacion" data-tipo="reporte">
+                <div>
+                  <div class="flexible"><span class="etiqueta">reporte</span><span class="insignia insignia-correcta">✓ Visible</span></div>
+                  <p class="texto-moderacion">Contiene datos personales de un supervisor.</p>
+                  <p class="pequeno atenuado"><strong>Valoración de Distribuidora Oriental</strong> · Sofía Barrera · 15 oct 2026</p>
+                </div>
+                <div class="acciones-moderacion">
+                  <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desestimar</button
+                  ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ocultar contenido</button
+                  ><button class="boton boton-peligro boton-pequeno" type="button" data-abrir-ventana="demostracion">Eliminar</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="pie-sitio">
+      <div class="contenedor">
+        <div class="rejilla-pie">
+          <div>
+            <img src="assets/logo.png" alt="WorkConnect" />
+            <p class="atenuado pequeno" style="max-width: 300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p>
+          </div>
+          <div>
+            <h4>Candidatos</h4>
+            <ul>
+              <li><a href="resultados.html">Buscar empleo</a></li>
+              <li><a href="recursos.html">Recursos</a></li>
+              <li><a href="foros.html">Foros</a></li>
+              <li><a href="candidato.html">Mi perfil</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Empresas</h4>
+            <ul>
+              <li><a href="publicar-vacante.html">Publicar vacante</a></li>
+              <li><a href="postulaciones.html">Postulaciones</a></li>
+              <li><a href="empresas.html">Mi empresa</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Portal</h4>
+            <ul>
+              <li><a href="login.html">Ingresar</a></li>
+              <li><a href="admin-dashboard.html">Administración</a></li>
+              <li><a href="index.html">Índice P01–P15</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div>
+      </div>
+    </footer>
+    <div class="fondo-ventana oculto" id="demostracion">
+      <section class="ventana" role="dialog" aria-modal="true" aria-labelledby="titulo-demostracion" tabindex="-1">
+        <div class="encabezado-ventana">
+          <h2 id="titulo-demostracion">Acción de demostración</h2>
+          <button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button>
+        </div>
+        <div class="contenido-ventana">
+          <p>El contenido y sus estados son datos fijos y no se modifican.</p>
+        </div>
+        <div class="pie-ventana">
+          <button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button>
+        </div>
+      </section>
+    </div>
+    <script src="js/interacciones.js"></script>
+  </body>
 </html>

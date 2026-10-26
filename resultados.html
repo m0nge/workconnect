@@ -1,55 +1,439 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Resultados de búsqueda · WorkConnect</title>
-<meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador.">
-<link rel="icon" type="image/png" href="assets/icono.png">
-<link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-<a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
-<header class="cabecera-sitio"><div class="contenedor barra"><a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38"></a><nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal"><a href="resultados.html" aria-current="page">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html">Foros</a><a href="login.html?pestana=registro&amp;rol=empresa">Para empresas</a></nav><div class="acciones-cabecera"><button class="boton boton-contorno boton-pequeno boton-indice" id="boton-indice" type="button" aria-haspopup="dialog">P01–P15</button><a class="boton boton-contorno boton-pequeno" href="login.html?pestana=ingresar">Ingresar</a><a class="boton boton-principal boton-pequeno" href="login.html?pestana=registro">Registrarse</a><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button></div></div></header>
-<main id="contenido-principal">
-<div class="contenedor">
-<div class="encabezado-pagina"><span class="sobretitulo"><span class="pantalla">P02</span>Resultados de búsqueda</span><h1>Empleos disponibles</h1><p>Filtra por ubicación, experiencia, salario, sector, modalidad y contrato.</p></div>
-<div class="distribucion-resultados">
-  <form class="filtros tarjeta">
-    <h3>Filtros</h3>
-    <div class="campo"><label for="r-palabra">Cargo o palabra clave</label><input id="r-palabra" name="palabra" type="search" placeholder="Ej. Analista"></div>
-    <div class="campo"><label for="r-ubicacion">Ubicación</label><select id="r-ubicacion" name="ubicacion"><option value="">Todo el país</option><option>Ahuachapán</option><option>Cabañas</option><option>Chalatenango</option><option>Cuscatlán</option><option>La Libertad</option><option>La Paz</option><option>La Unión</option><option>Morazán</option><option>San Miguel</option><option>San Salvador</option><option>San Vicente</option><option>Santa Ana</option><option>Sonsonate</option><option>Usulután</option></select></div>
-    <div class="campo"><label for="r-experiencia">Experiencia</label><select id="r-experiencia" name="experiencia"><option value="">Cualquiera</option><option>Sin experiencia</option><option>1 a 2 años</option><option>3 a 5 años</option><option>Más de 5 años</option></select></div>
-    <div class="campo"><label for="r-salario">Salario</label><select id="r-salario" name="salario"><option value="">Cualquiera</option><option>Desde $400</option><option>Desde $600</option><option>Desde $900</option><option>Desde $1,200</option></select></div>
-    <div class="campo"><label for="r-sector">Sector</label><select id="r-sector" name="sector"><option value="">Todos los sectores</option><option>Tecnología</option><option>Finanzas</option><option>Logística</option><option>Agroindustria</option><option>Salud</option><option>Manufactura</option><option>Turismo</option><option>Comercio</option><option>Educación</option><option>Administración</option><option>Construcción</option></select></div>
-    <div class="campo"><label for="r-modalidad">Modalidad</label><select id="r-modalidad" name="modalidad"><option value="">Todas</option><option>Presencial</option><option>Híbrido</option><option>Remoto</option></select></div>
-    <div class="campo"><label for="r-contrato">Contrato</label><select id="r-contrato" name="contrato"><option value="">Todos</option><option>Tiempo completo</option><option>Medio tiempo</option><option>Temporal</option><option>Por proyecto</option><option>Pasantía</option></select></div>
-    <button class="boton boton-contorno boton-ancho" type="reset">Limpiar filtros</button>
-  </form>
-  <section aria-label="Resultados">
-    <div class="barra-resultados">
-      <strong>12 vacantes encontradas</strong>
-      <div class="flexible"><label class="pequeno atenuado" for="orden-resultados">Ordenar por</label><select id="orden-resultados"><option>Más recientes</option><option>Mayor salario</option></select></div>
-    </div>
-    <div class="lista-vacantes">
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">TS</div><div><h3><a href="detalle-empleo.html?vacante=j6">Operario/a de Producción</a></h3><div class="empresa-vacante">Textiles San Marcos</div></div></div><div class="datos-vacante"><span>Soyapango, San Salvador</span><span>Presencial</span><span>Tiempo completo</span><span>Sin experiencia</span></div><p class="atenuado pequeno">Incorpórate a la línea de confección. Ofrecemos capacitación inicial pagada y oportunidad de crecimiento a supervisión.</p></div><div class="lateral-vacante"><div class="salario">$420 – $520 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 20 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j6">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">VS</div><div><h3><a href="detalle-empleo.html?vacante=j1">Desarrollador/a Full Stack</a></h3><div class="empresa-vacante">Volcán Software</div></div></div><div class="datos-vacante"><span>Antiguo Cuscatlán, La Libertad</span><span>Híbrido</span><span>Tiempo completo</span><span>3 a 5 años</span></div><p class="atenuado pequeno">Súmate al equipo de producto que construye la plataforma de banca digital de nuestros clientes. Trabajarás con equipos pequeños y entregas quincenales.</p></div><div class="lateral-vacante"><div class="salario">$1,200 – $1,800 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 19 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j1">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">DO</div><div><h3><a href="detalle-empleo.html?vacante=j8">Ejecutivo/a de Ventas</a></h3><div class="empresa-vacante">Distribuidora Oriental</div></div></div><div class="datos-vacante"><span>San Miguel, San Miguel</span><span>Presencial</span><span>Tiempo completo</span><span>1 a 2 años</span></div><p class="atenuado pequeno">Atenderás una cartera de tiendas y mini súper en la zona oriental, impulsando el portafolio de consumo masivo.</p></div><div class="lateral-vacante"><div class="salario">$600 – $900 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 19 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j8">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">CS</div><div><h3><a href="detalle-empleo.html?vacante=j5">Enfermero/a General</a></h3><div class="empresa-vacante">Clínica Santa Lucía</div></div></div><div class="datos-vacante"><span>Santa Ana, Santa Ana</span><span>Presencial</span><span>Tiempo completo</span><span>1 a 2 años</span></div><p class="atenuado pequeno">Atención directa a pacientes en hospitalización y apoyo en procedimientos menores, bajo coordinación médica.</p></div><div class="lateral-vacante"><div class="salario">$650 – $800 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 18 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j5">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">BD</div><div><h3><a href="detalle-empleo.html?vacante=j2">Analista de Riesgos Crediticios</a></h3><div class="empresa-vacante">Banco del Pacífico</div></div></div><div class="datos-vacante"><span>San Salvador, San Salvador</span><span>Presencial</span><span>Tiempo completo</span><span>3 a 5 años</span></div><p class="atenuado pequeno">Evaluarás solicitudes de crédito empresarial y darás seguimiento al comportamiento de la cartera en coordinación con las agencias.</p></div><div class="lateral-vacante"><div class="salario">$1,100 – $1,500 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 17 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j2">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">CA</div><div><h3><a href="detalle-empleo.html?vacante=j7">Recepcionista de Hotel</a></h3><div class="empresa-vacante">Costa Azul Hoteles</div></div></div><div class="datos-vacante"><span>Tamanique, La Libertad</span><span>Presencial</span><span>Tiempo completo</span><span>1 a 2 años</span></div><p class="atenuado pequeno">Serás la primera cara de nuestros huéspedes nacionales e internacionales en la Ruta del Surf.</p></div><div class="lateral-vacante"><div class="salario">$500 – $620 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 16 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j7">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">BD</div><div><h3><a href="detalle-empleo.html?vacante=j15">Analista de Datos</a></h3><div class="empresa-vacante">Banco del Pacífico</div></div></div><div class="datos-vacante"><span>San Salvador, San Salvador</span><span>Híbrido</span><span>Tiempo completo</span><span>1 a 2 años</span></div><p class="atenuado pequeno">Construirás tableros y modelos que ayuden a entender el comportamiento de clientes y la calidad de la cartera.</p></div><div class="lateral-vacante"><div class="salario">$1,000 – $1,400 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 16 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j15">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">LI</div><div><h3><a href="detalle-empleo.html?vacante=j3">Coordinador/a de Logística Portuaria</a></h3><div class="empresa-vacante">Logística Izalco</div></div></div><div class="datos-vacante"><span>Acajutla, Sonsonate</span><span>Presencial</span><span>Tiempo completo</span><span>3 a 5 años</span></div><p class="atenuado pequeno">Coordinarás la recepción, almacenaje y despacho de contenedores en nuestra bodega de Acajutla, garantizando entregas puntuales.</p></div><div class="lateral-vacante"><div class="salario">$900 – $1,200 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 15 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j3">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">VS</div><div><h3><a href="detalle-empleo.html?vacante=j9">Diseñador/a UX/UI</a></h3><div class="empresa-vacante">Volcán Software</div></div></div><div class="datos-vacante"><span>Remoto, San Salvador</span><span>Remoto</span><span>Tiempo completo</span><span>1 a 2 años</span></div><p class="atenuado pequeno">Diseña experiencias claras y accesibles para aplicaciones web y móviles de clientes regionales, desde la investigación hasta el prototipo.</p></div><div class="lateral-vacante"><div class="salario">$900 – $1,300 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 14 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j9">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">VS</div><div><h3><a href="detalle-empleo.html?vacante=j10">Soporte Técnico Nivel 1</a></h3><div class="empresa-vacante">Volcán Software</div></div></div><div class="datos-vacante"><span>San Salvador, San Salvador</span><span>Híbrido</span><span>Tiempo completo</span><span>Sin experiencia</span></div><p class="atenuado pequeno">Primera línea de atención a usuarios de nuestras plataformas. Ideal para quien inicia su carrera en tecnología.</p></div><div class="lateral-vacante"><div class="salario">$550 – $700 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 13 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j10">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">CA</div><div><h3><a href="detalle-empleo.html?vacante=j4">Supervisor/a de Beneficio de Café</a></h3><div class="empresa-vacante">Café Apaneca Export</div></div></div><div class="datos-vacante"><span>Apaneca, Ahuachapán</span><span>Presencial</span><span>Temporal</span><span>1 a 2 años</span></div><p class="atenuado pequeno">Para la cosecha 2026-2027 buscamos a quien supervise el recibo, secado y clasificación del café en nuestro beneficio.</p></div><div class="lateral-vacante"><div class="salario">$600 – $750 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 12 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j4">Ver detalle</a></div></div></article>
-      <article class="tarjeta-vacante"><div class="contenido-vacante"><div class="encabezado-vacante"><div class="monograma" aria-hidden="true">DO</div><div><h3><a href="detalle-empleo.html?vacante=j11">Contador/a General</a></h3><div class="empresa-vacante">Distribuidora Oriental</div></div></div><div class="datos-vacante"><span>San Miguel, San Miguel</span><span>Presencial</span><span>Tiempo completo</span><span>3 a 5 años</span></div><p class="atenuado pequeno">Responsable del cierre contable mensual, obligaciones tributarias y estados financieros de la distribuidora.</p></div><div class="lateral-vacante"><div class="salario">$800 – $1,000 <small>/ mes</small></div><div><div class="pequeno atenuado" style="margin-bottom:8px">Publicada el 10 oct 2026</div><a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j11">Ver detalle</a></div></div></article>
-    </div>
-  </section>
-</div>
-</div>
-</main>
-<footer class="pie-sitio"><div class="contenedor"><div class="rejilla-pie"><div><img src="assets/logo.png" alt="WorkConnect"><p class="atenuado pequeno" style="max-width:300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p></div><div><h4>Candidatos</h4><ul><li><a href="resultados.html">Buscar empleo</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="foros.html">Foros</a></li><li><a href="candidato.html">Mi perfil</a></li></ul></div><div><h4>Empresas</h4><ul><li><a href="publicar-vacante.html">Publicar vacante</a></li><li><a href="postulaciones.html">Postulaciones</a></li><li><a href="empresas.html">Mi empresa</a></li><li><a href="login.html?pestana=registro&amp;rol=empresa">Registrar empresa</a></li></ul></div><div><h4>Portal</h4><ul><li><a href="login.html">Ingresar</a></li><li><a href="admin-dashboard.html">Administración</a></li><li><a href="index.html" id="boton-pie-indice">Índice P01–P15</a></li></ul></div></div><div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div></div></footer>
-<script src="js/interacciones.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resultados de búsqueda · WorkConnect</title>
+    <meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador." />
+    <link rel="icon" type="image/png" href="assets/icono.png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
+    <header class="cabecera-sitio">
+      <div class="contenedor barra">
+        <a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38" /></a>
+        <nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal">
+          <a href="resultados.html" aria-current="page">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html">Foros</a><a href="login.html?pestana=registro&amp;rol=empresa">Para empresas</a>
+        </nav>
+        <div class="acciones-cabecera">
+          <button class="boton boton-contorno boton-pequeno boton-indice" id="boton-indice" type="button" aria-haspopup="dialog">P01–P15</button><a class="boton boton-contorno boton-pequeno" href="login.html?pestana=ingresar">Ingresar</a
+          ><a class="boton boton-principal boton-pequeno" href="login.html?pestana=registro">Registrarse</a><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+    <main id="contenido-principal">
+      <div class="contenedor">
+        <div class="encabezado-pagina">
+          <span class="sobretitulo"><span class="pantalla">P02</span>Resultados de búsqueda</span>
+          <h1>Empleos disponibles</h1>
+          <p>Filtra por ubicación, experiencia, salario, sector, modalidad y contrato.</p>
+        </div>
+        <div class="distribucion-resultados">
+          <form class="filtros tarjeta">
+            <h3>Filtros</h3>
+            <div class="campo"><label for="r-palabra">Cargo o palabra clave</label><input id="r-palabra" name="palabra" type="search" placeholder="Ej. Analista" /></div>
+            <div class="campo">
+              <label for="r-ubicacion">Ubicación</label
+              ><select id="r-ubicacion" name="ubicacion">
+                <option value="">Todo el país</option>
+                <option>Ahuachapán</option>
+                <option>Cabañas</option>
+                <option>Chalatenango</option>
+                <option>Cuscatlán</option>
+                <option>La Libertad</option>
+                <option>La Paz</option>
+                <option>La Unión</option>
+                <option>Morazán</option>
+                <option>San Miguel</option>
+                <option>San Salvador</option>
+                <option>San Vicente</option>
+                <option>Santa Ana</option>
+                <option>Sonsonate</option>
+                <option>Usulután</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="r-experiencia">Experiencia</label
+              ><select id="r-experiencia" name="experiencia">
+                <option value="">Cualquiera</option>
+                <option>Sin experiencia</option>
+                <option>1 a 2 años</option>
+                <option>3 a 5 años</option>
+                <option>Más de 5 años</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="r-salario">Salario</label
+              ><select id="r-salario" name="salario">
+                <option value="">Cualquiera</option>
+                <option>Desde $400</option>
+                <option>Desde $600</option>
+                <option>Desde $900</option>
+                <option>Desde $1,200</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="r-sector">Sector</label
+              ><select id="r-sector" name="sector">
+                <option value="">Todos los sectores</option>
+                <option>Tecnología</option>
+                <option>Finanzas</option>
+                <option>Logística</option>
+                <option>Agroindustria</option>
+                <option>Salud</option>
+                <option>Manufactura</option>
+                <option>Turismo</option>
+                <option>Comercio</option>
+                <option>Educación</option>
+                <option>Administración</option>
+                <option>Construcción</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="r-modalidad">Modalidad</label
+              ><select id="r-modalidad" name="modalidad">
+                <option value="">Todas</option>
+                <option>Presencial</option>
+                <option>Híbrido</option>
+                <option>Remoto</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="r-contrato">Contrato</label
+              ><select id="r-contrato" name="contrato">
+                <option value="">Todos</option>
+                <option>Tiempo completo</option>
+                <option>Medio tiempo</option>
+                <option>Temporal</option>
+                <option>Por proyecto</option>
+                <option>Pasantía</option>
+              </select>
+            </div>
+            <button class="boton boton-contorno boton-ancho" type="reset">Limpiar filtros</button>
+          </form>
+          <section aria-label="Resultados">
+            <div class="barra-resultados">
+              <strong>12 vacantes encontradas</strong>
+              <div class="flexible">
+                <label class="pequeno atenuado" for="orden-resultados">Ordenar por</label
+                ><select id="orden-resultados">
+                  <option>Más recientes</option>
+                  <option>Mayor salario</option>
+                </select>
+              </div>
+            </div>
+            <div class="lista-vacantes">
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">TS</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j6">Operario/a de Producción</a>
+                      </h3>
+                      <div class="empresa-vacante">Textiles San Marcos</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>Soyapango, San Salvador</span><span>Presencial</span><span>Tiempo completo</span><span>Sin experiencia</span></div>
+                  <p class="atenuado pequeno">Incorpórate a la línea de confección. Ofrecemos capacitación inicial pagada y oportunidad de crecimiento a supervisión.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$420 – $520 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 20 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j6">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">VS</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j1">Desarrollador/a Full Stack</a>
+                      </h3>
+                      <div class="empresa-vacante">Volcán Software</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>Antiguo Cuscatlán, La Libertad</span><span>Híbrido</span><span>Tiempo completo</span><span>3 a 5 años</span></div>
+                  <p class="atenuado pequeno">Súmate al equipo de producto que construye la plataforma de banca digital de nuestros clientes. Trabajarás con equipos pequeños y entregas quincenales.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$1,200 – $1,800 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 19 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j1">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">DO</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j8">Ejecutivo/a de Ventas</a>
+                      </h3>
+                      <div class="empresa-vacante">Distribuidora Oriental</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>San Miguel, San Miguel</span><span>Presencial</span><span>Tiempo completo</span><span>1 a 2 años</span></div>
+                  <p class="atenuado pequeno">Atenderás una cartera de tiendas y mini súper en la zona oriental, impulsando el portafolio de consumo masivo.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$600 – $900 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 19 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j8">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">CS</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j5">Enfermero/a General</a>
+                      </h3>
+                      <div class="empresa-vacante">Clínica Santa Lucía</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>Santa Ana, Santa Ana</span><span>Presencial</span><span>Tiempo completo</span><span>1 a 2 años</span></div>
+                  <p class="atenuado pequeno">Atención directa a pacientes en hospitalización y apoyo en procedimientos menores, bajo coordinación médica.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$650 – $800 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 18 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j5">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">BD</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j2">Analista de Riesgos Crediticios</a>
+                      </h3>
+                      <div class="empresa-vacante">Banco del Pacífico</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>San Salvador, San Salvador</span><span>Presencial</span><span>Tiempo completo</span><span>3 a 5 años</span></div>
+                  <p class="atenuado pequeno">Evaluarás solicitudes de crédito empresarial y darás seguimiento al comportamiento de la cartera en coordinación con las agencias.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$1,100 – $1,500 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 17 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j2">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">CA</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j7">Recepcionista de Hotel</a>
+                      </h3>
+                      <div class="empresa-vacante">Costa Azul Hoteles</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>Tamanique, La Libertad</span><span>Presencial</span><span>Tiempo completo</span><span>1 a 2 años</span></div>
+                  <p class="atenuado pequeno">Serás la primera cara de nuestros huéspedes nacionales e internacionales en la Ruta del Surf.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$500 – $620 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 16 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j7">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">BD</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j15">Analista de Datos</a>
+                      </h3>
+                      <div class="empresa-vacante">Banco del Pacífico</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>San Salvador, San Salvador</span><span>Híbrido</span><span>Tiempo completo</span><span>1 a 2 años</span></div>
+                  <p class="atenuado pequeno">Construirás tableros y modelos que ayuden a entender el comportamiento de clientes y la calidad de la cartera.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$1,000 – $1,400 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 16 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j15">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">LI</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j3">Coordinador/a de Logística Portuaria</a>
+                      </h3>
+                      <div class="empresa-vacante">Logística Izalco</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>Acajutla, Sonsonate</span><span>Presencial</span><span>Tiempo completo</span><span>3 a 5 años</span></div>
+                  <p class="atenuado pequeno">Coordinarás la recepción, almacenaje y despacho de contenedores en nuestra bodega de Acajutla, garantizando entregas puntuales.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$900 – $1,200 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 15 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j3">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">VS</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j9">Diseñador/a UX/UI</a>
+                      </h3>
+                      <div class="empresa-vacante">Volcán Software</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>Remoto, San Salvador</span><span>Remoto</span><span>Tiempo completo</span><span>1 a 2 años</span></div>
+                  <p class="atenuado pequeno">Diseña experiencias claras y accesibles para aplicaciones web y móviles de clientes regionales, desde la investigación hasta el prototipo.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$900 – $1,300 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 14 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j9">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">VS</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j10">Soporte Técnico Nivel 1</a>
+                      </h3>
+                      <div class="empresa-vacante">Volcán Software</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>San Salvador, San Salvador</span><span>Híbrido</span><span>Tiempo completo</span><span>Sin experiencia</span></div>
+                  <p class="atenuado pequeno">Primera línea de atención a usuarios de nuestras plataformas. Ideal para quien inicia su carrera en tecnología.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$550 – $700 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 13 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j10">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">CA</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j4">Supervisor/a de Beneficio de Café</a>
+                      </h3>
+                      <div class="empresa-vacante">Café Apaneca Export</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>Apaneca, Ahuachapán</span><span>Presencial</span><span>Temporal</span><span>1 a 2 años</span></div>
+                  <p class="atenuado pequeno">Para la cosecha 2026-2027 buscamos a quien supervise el recibo, secado y clasificación del café en nuestro beneficio.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$600 – $750 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 12 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j4">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+              <article class="tarjeta-vacante">
+                <div class="contenido-vacante">
+                  <div class="encabezado-vacante">
+                    <div class="monograma" aria-hidden="true">DO</div>
+                    <div>
+                      <h3>
+                        <a href="detalle-empleo.html?vacante=j11">Contador/a General</a>
+                      </h3>
+                      <div class="empresa-vacante">Distribuidora Oriental</div>
+                    </div>
+                  </div>
+                  <div class="datos-vacante"><span>San Miguel, San Miguel</span><span>Presencial</span><span>Tiempo completo</span><span>3 a 5 años</span></div>
+                  <p class="atenuado pequeno">Responsable del cierre contable mensual, obligaciones tributarias y estados financieros de la distribuidora.</p>
+                </div>
+                <div class="lateral-vacante">
+                  <div class="salario">$800 – $1,000 <small>/ mes</small></div>
+                  <div>
+                    <div class="pequeno atenuado" style="margin-bottom: 8px">Publicada el 10 oct 2026</div>
+                    <a class="boton boton-carbon boton-pequeno" href="detalle-empleo.html?vacante=j11">Ver detalle</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="pie-sitio">
+      <div class="contenedor">
+        <div class="rejilla-pie">
+          <div>
+            <img src="assets/logo.png" alt="WorkConnect" />
+            <p class="atenuado pequeno" style="max-width: 300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p>
+          </div>
+          <div>
+            <h4>Candidatos</h4>
+            <ul>
+              <li><a href="resultados.html">Buscar empleo</a></li>
+              <li><a href="recursos.html">Recursos</a></li>
+              <li><a href="foros.html">Foros</a></li>
+              <li><a href="candidato.html">Mi perfil</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Empresas</h4>
+            <ul>
+              <li><a href="publicar-vacante.html">Publicar vacante</a></li>
+              <li><a href="postulaciones.html">Postulaciones</a></li>
+              <li><a href="empresas.html">Mi empresa</a></li>
+              <li>
+                <a href="login.html?pestana=registro&amp;rol=empresa">Registrar empresa</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Portal</h4>
+            <ul>
+              <li><a href="login.html">Ingresar</a></li>
+              <li><a href="admin-dashboard.html">Administración</a></li>
+              <li>
+                <a href="index.html" id="boton-pie-indice">Índice P01–P15</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div>
+      </div>
+    </footer>
+    <script src="js/interacciones.js"></script>
+  </body>
 </html>

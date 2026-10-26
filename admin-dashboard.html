@@ -1,23 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dashboard administrativo · WorkConnect</title>
-<meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador.">
-<link rel="icon" type="image/png" href="assets/icono.png">
-<link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-<a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
-<header class="cabecera-sitio"><div class="contenedor barra"><a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38"></a><nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal"><a href="resultados.html">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html">Foros</a><a href="admin-dashboard.html" aria-current="page">Administración</a></nav><div class="acciones-cabecera"><a class="boton boton-contorno boton-pequeno boton-indice" href="index.html">P01–P15</a><a class="boton boton-contorno boton-pequeno" href="login.html">Ingresar</a><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button></div></div></header>
-<main id="contenido-principal">
-<div class="contenedor"><div class="panel-administracion"><aside class="navegacion-administracion" aria-label="Administración"><h4>Administración</h4><a href="admin-dashboard.html" aria-current="page"><b>P11</b>Dashboard</a><a href="admin-usuarios.html"><b>P12</b>Usuarios</a><a href="admin-empresas.html"><b>P13</b>Empresas</a><a href="admin-vacantes.html"><b>P14</b>Vacantes</a><a href="admin-moderacion.html"><b>P15</b>Moderación</a></aside><div><div class="encabezado-administracion"><span class="sobretitulo"><span class="pantalla">P11</span>Administración</span><h1>Dashboard</h1><p>Resumen del portal con datos de la sesión de demostración.</p></div>
-<div class="rejilla-indicadores"><div class="indicador"><span>Usuarios</span><b>23</b><small>21 activos</small></div><div class="indicador"><span>Empresas</span><b>10</b><small>8 verificadas</small></div><div class="indicador"><span>Vacantes</span><b>15</b><small>12 activas</small></div><div class="indicador"><span>Postulaciones</span><b>12</b><small>1 contrataciones</small></div></div>
-<div class="graficos"><section class="tarjeta"><h3>Postulaciones por mes</h3><p class="pequeno atenuado">Cifras históricas de ejemplo.</p><div class="grafico-columnas" role="img" aria-label="Postulaciones mensuales: mayo 182, junio 240, julio 310, agosto 285, septiembre 402, octubre 468"><div class="columna"><b>182</b><i style="height:54px"></i><span>May</span></div><div class="columna"><b>240</b><i style="height:72px"></i><span>Jun</span></div><div class="columna"><b>310</b><i style="height:93px"></i><span>Jul</span></div><div class="columna"><b>285</b><i style="height:85px"></i><span>Ago</span></div><div class="columna"><b>402</b><i style="height:120px"></i><span>Sep</span></div><div class="columna"><b>468</b><i style="height:140px"></i><span>Oct</span></div></div></section><section class="tarjeta"><h3>Postulaciones por estado</h3><div class="envoltura-anillo"><div class="anillo" style="background:conic-gradient(#E1DDD8 0% 33.33%,#B9B2AA 33.33% 58.33%,#1F1F23 58.33% 83.33%,#7A2E3A 83.33% 91.67%,#8A8680 91.67% 100%)" role="img" aria-label="Nueva: 4, En revisión: 3, Entrevista: 3, Contratada: 1, Rechazada: 1"></div><ul class="leyenda"><li><i style="background:#E1DDD8"></i>Nueva · <b>4</b></li><li><i style="background:#B9B2AA"></i>En revisión · <b>3</b></li><li><i style="background:#1F1F23"></i>Entrevista · <b>3</b></li><li><i style="background:#7A2E3A"></i>Contratada · <b>1</b></li><li><i style="background:#8A8680"></i>Rechazada · <b>1</b></li></ul></div></section></div>
-<div class="graficos" style="grid-template-columns:1fr 1fr"><section class="tarjeta"><h3>Vacantes activas por sector</h3><div class="barra-horizontal"><div class="parte-superior"><span>Tecnología</span><b>4</b></div><div class="pista"><i style="width:100%"></i></div></div><div class="barra-horizontal"><div class="parte-superior"><span>Finanzas</span><b>2</b></div><div class="pista"><i style="width:50%"></i></div></div><div class="barra-horizontal"><div class="parte-superior"><span>Agroindustria</span><b>1</b></div><div class="pista"><i style="width:25%"></i></div></div><div class="barra-horizontal"><div class="parte-superior"><span>Logística</span><b>1</b></div><div class="pista"><i style="width:25%"></i></div></div><div class="barra-horizontal"><div class="parte-superior"><span>Manufactura</span><b>1</b></div><div class="pista"><i style="width:25%"></i></div></div><div class="barra-horizontal"><div class="parte-superior"><span>Salud</span><b>1</b></div><div class="pista"><i style="width:25%"></i></div></div></section><section class="tarjeta"><h3>Pendientes de atención</h3><div class="pendientes"><a href="admin-vacantes.html">Vacantes por aprobar <span>2</span></a><a href="admin-empresas.html">Empresas por verificar <span>2</span></a><a href="admin-moderacion.html">Contenido por moderar <span>3</span></a><a href="admin-usuarios.html">Cuentas inactivas <span>2</span></a></div></section></div>
-</div></div></div>
-</main>
-<footer class="pie-sitio"><div class="contenedor"><div class="rejilla-pie"><div><img src="assets/logo.png" alt="WorkConnect"><p class="atenuado pequeno" style="max-width:300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p></div><div><h4>Candidatos</h4><ul><li><a href="resultados.html">Buscar empleo</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="foros.html">Foros</a></li><li><a href="candidato.html">Mi perfil</a></li></ul></div><div><h4>Empresas</h4><ul><li><a href="publicar-vacante.html">Publicar vacante</a></li><li><a href="postulaciones.html">Postulaciones</a></li><li><a href="empresas.html">Mi empresa</a></li><li><a href="login.html?pestana=registro&amp;rol=empresa">Registrar empresa</a></li></ul></div><div><h4>Portal</h4><ul><li><a href="login.html">Ingresar</a></li><li><a href="admin-dashboard.html">Administración</a></li><li><a href="index.html">Índice P01–P15</a></li></ul></div></div><div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div></div></footer><script src="js/interacciones.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard administrativo · WorkConnect</title>
+    <meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador." />
+    <link rel="icon" type="image/png" href="assets/icono.png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
+    <header class="cabecera-sitio">
+      <div class="contenedor barra">
+        <a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38" /></a>
+        <nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal">
+          <a href="resultados.html">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html">Foros</a><a href="admin-dashboard.html" aria-current="page">Administración</a>
+        </nav>
+        <div class="acciones-cabecera">
+          <a class="boton boton-contorno boton-pequeno boton-indice" href="index.html">P01–P15</a><a class="boton boton-contorno boton-pequeno" href="login.html">Ingresar</a
+          ><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+    <main id="contenido-principal">
+      <div class="contenedor">
+        <div class="panel-administracion">
+          <aside class="navegacion-administracion" aria-label="Administración">
+            <h4>Administración</h4>
+            <a href="admin-dashboard.html" aria-current="page"><b>P11</b>Dashboard</a><a href="admin-usuarios.html"><b>P12</b>Usuarios</a><a href="admin-empresas.html"><b>P13</b>Empresas</a
+            ><a href="admin-vacantes.html"><b>P14</b>Vacantes</a><a href="admin-moderacion.html"><b>P15</b>Moderación</a>
+          </aside>
+          <div>
+            <div class="encabezado-administracion">
+              <span class="sobretitulo"><span class="pantalla">P11</span>Administración</span>
+              <h1>Dashboard</h1>
+              <p>Resumen del portal con datos de la sesión de demostración.</p>
+            </div>
+            <div class="rejilla-indicadores">
+              <div class="indicador"><span>Usuarios</span><b>23</b><small>21 activos</small></div>
+              <div class="indicador"><span>Empresas</span><b>10</b><small>8 verificadas</small></div>
+              <div class="indicador"><span>Vacantes</span><b>15</b><small>12 activas</small></div>
+              <div class="indicador"><span>Postulaciones</span><b>12</b><small>1 contrataciones</small></div>
+            </div>
+            <div class="graficos">
+              <section class="tarjeta">
+                <h3>Postulaciones por mes</h3>
+                <p class="pequeno atenuado">Cifras históricas de ejemplo.</p>
+                <div class="grafico-columnas" role="img" aria-label="Postulaciones mensuales: mayo 182, junio 240, julio 310, agosto 285, septiembre 402, octubre 468">
+                  <div class="columna"><b>182</b><i style="height: 54px"></i><span>May</span></div>
+                  <div class="columna"><b>240</b><i style="height: 72px"></i><span>Jun</span></div>
+                  <div class="columna"><b>310</b><i style="height: 93px"></i><span>Jul</span></div>
+                  <div class="columna"><b>285</b><i style="height: 85px"></i><span>Ago</span></div>
+                  <div class="columna"><b>402</b><i style="height: 120px"></i><span>Sep</span></div>
+                  <div class="columna"><b>468</b><i style="height: 140px"></i><span>Oct</span></div>
+                </div>
+              </section>
+              <section class="tarjeta">
+                <h3>Postulaciones por estado</h3>
+                <div class="envoltura-anillo">
+                  <div
+                    class="anillo"
+                    style="background: conic-gradient(#e1ddd8 0% 33.33%, #b9b2aa 33.33% 58.33%, #1f1f23 58.33% 83.33%, #7a2e3a 83.33% 91.67%, #8a8680 91.67% 100%)"
+                    role="img"
+                    aria-label="Nueva: 4, En revisión: 3, Entrevista: 3, Contratada: 1, Rechazada: 1"
+                  ></div>
+                  <ul class="leyenda">
+                    <li><i style="background: #e1ddd8"></i>Nueva · <b>4</b></li>
+                    <li><i style="background: #b9b2aa"></i>En revisión · <b>3</b></li>
+                    <li><i style="background: #1f1f23"></i>Entrevista · <b>3</b></li>
+                    <li><i style="background: #7a2e3a"></i>Contratada · <b>1</b></li>
+                    <li><i style="background: #8a8680"></i>Rechazada · <b>1</b></li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="graficos" style="grid-template-columns: 1fr 1fr">
+              <section class="tarjeta">
+                <h3>Vacantes activas por sector</h3>
+                <div class="barra-horizontal">
+                  <div class="parte-superior"><span>Tecnología</span><b>4</b></div>
+                  <div class="pista"><i style="width: 100%"></i></div>
+                </div>
+                <div class="barra-horizontal">
+                  <div class="parte-superior"><span>Finanzas</span><b>2</b></div>
+                  <div class="pista"><i style="width: 50%"></i></div>
+                </div>
+                <div class="barra-horizontal">
+                  <div class="parte-superior"><span>Agroindustria</span><b>1</b></div>
+                  <div class="pista"><i style="width: 25%"></i></div>
+                </div>
+                <div class="barra-horizontal">
+                  <div class="parte-superior"><span>Logística</span><b>1</b></div>
+                  <div class="pista"><i style="width: 25%"></i></div>
+                </div>
+                <div class="barra-horizontal">
+                  <div class="parte-superior"><span>Manufactura</span><b>1</b></div>
+                  <div class="pista"><i style="width: 25%"></i></div>
+                </div>
+                <div class="barra-horizontal">
+                  <div class="parte-superior"><span>Salud</span><b>1</b></div>
+                  <div class="pista"><i style="width: 25%"></i></div>
+                </div>
+              </section>
+              <section class="tarjeta">
+                <h3>Pendientes de atención</h3>
+                <div class="pendientes">
+                  <a href="admin-vacantes.html">Vacantes por aprobar <span>2</span></a
+                  ><a href="admin-empresas.html">Empresas por verificar <span>2</span></a
+                  ><a href="admin-moderacion.html">Contenido por moderar <span>3</span></a
+                  ><a href="admin-usuarios.html">Cuentas inactivas <span>2</span></a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="pie-sitio">
+      <div class="contenedor">
+        <div class="rejilla-pie">
+          <div>
+            <img src="assets/logo.png" alt="WorkConnect" />
+            <p class="atenuado pequeno" style="max-width: 300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p>
+          </div>
+          <div>
+            <h4>Candidatos</h4>
+            <ul>
+              <li><a href="resultados.html">Buscar empleo</a></li>
+              <li><a href="recursos.html">Recursos</a></li>
+              <li><a href="foros.html">Foros</a></li>
+              <li><a href="candidato.html">Mi perfil</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Empresas</h4>
+            <ul>
+              <li><a href="publicar-vacante.html">Publicar vacante</a></li>
+              <li><a href="postulaciones.html">Postulaciones</a></li>
+              <li><a href="empresas.html">Mi empresa</a></li>
+              <li>
+                <a href="login.html?pestana=registro&amp;rol=empresa">Registrar empresa</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Portal</h4>
+            <ul>
+              <li><a href="login.html">Ingresar</a></li>
+              <li><a href="admin-dashboard.html">Administración</a></li>
+              <li><a href="index.html">Índice P01–P15</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div>
+      </div>
+    </footer>
+    <script src="js/interacciones.js"></script>
+  </body>
 </html>

@@ -1,36 +1,387 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gestión de vacantes · WorkConnect</title>
-<meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador.">
-<link rel="icon" type="image/png" href="assets/icono.png">
-<link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-<a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
-<header class="cabecera-sitio"><div class="contenedor barra"><a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38"></a><nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal"><a href="resultados.html">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html">Foros</a><a href="admin-dashboard.html" aria-current="page">Administración</a></nav><div class="acciones-cabecera"><a class="boton boton-contorno boton-pequeno boton-indice" href="index.html">P01–P15</a><a class="boton boton-contorno boton-pequeno" href="login.html">Ingresar</a><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button></div></div></header>
-<main id="contenido-principal">
-<div class="contenedor"><div class="panel-administracion"><aside class="navegacion-administracion" aria-label="Administración"><h4>Administración</h4><a href="admin-dashboard.html"><b>P11</b>Dashboard</a><a href="admin-usuarios.html"><b>P12</b>Usuarios</a><a href="admin-empresas.html"><b>P13</b>Empresas</a><a href="admin-vacantes.html" aria-current="page"><b>P14</b>Vacantes</a><a href="admin-moderacion.html"><b>P15</b>Moderación</a></aside><div><div class="encabezado-administracion"><span class="sobretitulo"><span class="pantalla">P14</span>Administración</span><h1>Vacantes</h1><p>Aprueba las nuevas publicaciones, edítalas o desactívalas.</p></div><div class="pestanas" role="tablist"><button class="pestana" role="tab" data-categoria="todos" aria-selected="true">Todas (15)</button><button class="pestana" role="tab" data-categoria="pendiente" aria-selected="false">Pendientes (2)</button><button class="pestana" role="tab" data-categoria="activa" aria-selected="false">Activas (12)</button><button class="pestana" role="tab" data-categoria="inactiva" aria-selected="false">Inactivas (1)</button></div><div class="barra-herramientas"><div class="campo expandir"><label class="solo-lector" for="buscar-vacante">Buscar</label><input id="buscar-vacante" type="search" placeholder="Buscar por puesto o empresa"></div></div>
-<div class="contenedor-tabla"><table><thead><tr><th>Vacante</th><th>Salario</th><th>Publicada</th><th>Estado</th><th>Acciones</th></tr></thead><tbody>
-<tr data-tipo="activa"><td><div class="celda-principal">Operario/a de Producción</div><div class="celda-secundaria">Textiles San Marcos · Soyapango</div></td><td>$420 – $520</td><td>20 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="pendiente"><td><div class="celda-principal">Ingeniero/a Civil Residente</div><div class="celda-secundaria">Constructora Lempa · Usulután</div></td><td>$1,400 – $1,900</td><td>20 oct 2026</td><td><span class="insignia insignia-pendiente">Pendiente</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-carbon boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Desarrollador/a Full Stack</div><div class="celda-secundaria">Volcán Software · Antiguo Cuscatlán</div></td><td>$1,200 – $1,800</td><td>19 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Ejecutivo/a de Ventas</div><div class="celda-secundaria">Distribuidora Oriental · San Miguel</div></td><td>$600 – $900</td><td>19 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Enfermero/a General</div><div class="celda-secundaria">Clínica Santa Lucía · Santa Ana</div></td><td>$650 – $800</td><td>18 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Analista de Riesgos Crediticios</div><div class="celda-secundaria">Banco del Pacífico · San Salvador</div></td><td>$1,100 – $1,500</td><td>17 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Recepcionista de Hotel</div><div class="celda-secundaria">Costa Azul Hoteles · Tamanique</div></td><td>$500 – $620</td><td>16 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Analista de Datos</div><div class="celda-secundaria">Banco del Pacífico · San Salvador</div></td><td>$1,000 – $1,400</td><td>16 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Coordinador/a de Logística Portuaria</div><div class="celda-secundaria">Logística Izalco · Acajutla</div></td><td>$900 – $1,200</td><td>15 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Diseñador/a UX/UI</div><div class="celda-secundaria">Volcán Software · Remoto</div></td><td>$900 – $1,300</td><td>14 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Soporte Técnico Nivel 1</div><div class="celda-secundaria">Volcán Software · San Salvador</div></td><td>$550 – $700</td><td>13 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Contador/a General</div><div class="celda-secundaria">Distribuidora Oriental · San Miguel</div></td><td>$800 – $1,000</td><td>10 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-<tr data-tipo="pendiente"><td><div class="celda-principal">Docente de Inglés</div><div class="celda-secundaria">Colegio Nuevo Horizonte · Santa Tecla</div></td><td>$450 – $600</td><td>21 oct 2026</td><td><span class="insignia insignia-pendiente">Pendiente</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-carbon boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button></div></td></tr>
-<tr data-tipo="inactiva"><td><div class="celda-principal">Asistente Administrativo (Pasantía)</div><div class="celda-secundaria">Logística Izalco · San Salvador</div></td><td>$300 – $350</td><td>7 oct 2026</td><td><span class="insignia insignia-inactiva">– Inactiva</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Reactivar</button></div></td></tr>
-<tr data-tipo="activa"><td><div class="celda-principal">Supervisor/a de Beneficio de Café</div><div class="celda-secundaria">Café Apaneca Export · Apaneca</div></td><td>$600 – $750</td><td>12 oct 2026</td><td><span class="insignia insignia-correcta">✓ Activa</span></td><td><div class="acciones"><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button></div></td></tr>
-</tbody></table></div></div></div></div></div>
-</main>
-<footer class="pie-sitio"><div class="contenedor"><div class="rejilla-pie"><div><img src="assets/logo.png" alt="WorkConnect"><p class="atenuado pequeno" style="max-width:300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p></div><div><h4>Candidatos</h4><ul><li><a href="resultados.html">Buscar empleo</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="foros.html">Foros</a></li><li><a href="candidato.html">Mi perfil</a></li></ul></div><div><h4>Empresas</h4><ul><li><a href="publicar-vacante.html">Publicar vacante</a></li><li><a href="postulaciones.html">Postulaciones</a></li><li><a href="empresas.html">Mi empresa</a></li></ul></div><div><h4>Portal</h4><ul><li><a href="login.html">Ingresar</a></li><li><a href="admin-dashboard.html">Administración</a></li><li><a href="index.html">Índice P01–P15</a></li></ul></div></div><div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div></div></footer><div class="fondo-ventana oculto" id="demostracion"><section class="ventana" role="dialog" aria-modal="true" aria-labelledby="titulo-demostracion" tabindex="-1"><div class="encabezado-ventana"><h2 id="titulo-demostracion">Acción de demostración</h2><button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button></div><div class="contenido-ventana"><p>Las vacantes y sus estados son datos fijos y no se modifican.</p></div><div class="pie-ventana"><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button></div></section></div><script src="js/interacciones.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GestiÃ³n de vacantes Â· WorkConnect</title>
+    <meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador." />
+    <link rel="icon" type="image/png" href="assets/icono.png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
+    <header class="cabecera-sitio">
+      <div class="contenedor barra">
+        <a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect â€” Conectando talento con oportunidades" width="214" height="38" /></a>
+        <nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal">
+          <a href="resultados.html">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html">Foros</a><a href="admin-dashboard.html" aria-current="page">AdministraciÃ³n</a>
+        </nav>
+        <div class="acciones-cabecera">
+          <a class="boton boton-contorno boton-pequeno boton-indice" href="index.html">P01â€“P15</a><a class="boton boton-contorno boton-pequeno" href="login.html">Ingresar</a
+          ><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menÃº" aria-expanded="false">â˜°</button>
+        </div>
+      </div>
+    </header>
+    <main id="contenido-principal">
+      <div class="contenedor">
+        <div class="panel-administracion">
+          <aside class="navegacion-administracion" aria-label="AdministraciÃ³n">
+            <h4>AdministraciÃ³n</h4>
+            <a href="admin-dashboard.html"><b>P11</b>Dashboard</a><a href="admin-usuarios.html"><b>P12</b>Usuarios</a><a href="admin-empresas.html"><b>P13</b>Empresas</a
+            ><a href="admin-vacantes.html" aria-current="page"><b>P14</b>Vacantes</a><a href="admin-moderacion.html"><b>P15</b>ModeraciÃ³n</a>
+          </aside>
+          <div>
+            <div class="encabezado-administracion">
+              <span class="sobretitulo"><span class="pantalla">P14</span>AdministraciÃ³n</span>
+              <h1>Vacantes</h1>
+              <p>Aprueba las nuevas publicaciones, edÃ­talas o desactÃ­valas.</p>
+            </div>
+            <div class="pestanas" role="tablist">
+              <button class="pestana" role="tab" data-categoria="todos" aria-selected="true">Todas (15)</button><button class="pestana" role="tab" data-categoria="pendiente" aria-selected="false">Pendientes (2)</button
+              ><button class="pestana" role="tab" data-categoria="activa" aria-selected="false">Activas (12)</button><button class="pestana" role="tab" data-categoria="inactiva" aria-selected="false">Inactivas (1)</button>
+            </div>
+            <div class="barra-herramientas">
+              <div class="campo expandir"><label class="solo-lector" for="buscar-vacante">Buscar</label><input id="buscar-vacante" type="search" placeholder="Buscar por puesto o empresa" /></div>
+            </div>
+            <div class="contenedor-tabla">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Vacante</th>
+                    <th>Salario</th>
+                    <th>Publicada</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Operario/a de ProducciÃ³n</div>
+                      <div class="celda-secundaria">Textiles San Marcos Â· Soyapango</div>
+                    </td>
+                    <td>$420 â€“ $520</td>
+                    <td>20 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="pendiente">
+                    <td>
+                      <div class="celda-principal">Ingeniero/a Civil Residente</div>
+                      <div class="celda-secundaria">Constructora Lempa Â· UsulutÃ¡n</div>
+                    </td>
+                    <td>$1,400 â€“ $1,900</td>
+                    <td>20 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-pendiente">Pendiente</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-carbon boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Desarrollador/a Full Stack</div>
+                      <div class="celda-secundaria">VolcÃ¡n Software Â· Antiguo CuscatlÃ¡n</div>
+                    </td>
+                    <td>$1,200 â€“ $1,800</td>
+                    <td>19 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Ejecutivo/a de Ventas</div>
+                      <div class="celda-secundaria">Distribuidora Oriental Â· San Miguel</div>
+                    </td>
+                    <td>$600 â€“ $900</td>
+                    <td>19 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Enfermero/a General</div>
+                      <div class="celda-secundaria">ClÃ­nica Santa LucÃ­a Â· Santa Ana</div>
+                    </td>
+                    <td>$650 â€“ $800</td>
+                    <td>18 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Analista de Riesgos Crediticios</div>
+                      <div class="celda-secundaria">Banco del PacÃ­fico Â· San Salvador</div>
+                    </td>
+                    <td>$1,100 â€“ $1,500</td>
+                    <td>17 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Recepcionista de Hotel</div>
+                      <div class="celda-secundaria">Costa Azul Hoteles Â· Tamanique</div>
+                    </td>
+                    <td>$500 â€“ $620</td>
+                    <td>16 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Analista de Datos</div>
+                      <div class="celda-secundaria">Banco del PacÃ­fico Â· San Salvador</div>
+                    </td>
+                    <td>$1,000 â€“ $1,400</td>
+                    <td>16 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Coordinador/a de LogÃ­stica Portuaria</div>
+                      <div class="celda-secundaria">LogÃ­stica Izalco Â· Acajutla</div>
+                    </td>
+                    <td>$900 â€“ $1,200</td>
+                    <td>15 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">DiseÃ±ador/a UX/UI</div>
+                      <div class="celda-secundaria">VolcÃ¡n Software Â· Remoto</div>
+                    </td>
+                    <td>$900 â€“ $1,300</td>
+                    <td>14 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Soporte TÃ©cnico Nivel 1</div>
+                      <div class="celda-secundaria">VolcÃ¡n Software Â· San Salvador</div>
+                    </td>
+                    <td>$550 â€“ $700</td>
+                    <td>13 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Contador/a General</div>
+                      <div class="celda-secundaria">Distribuidora Oriental Â· San Miguel</div>
+                    </td>
+                    <td>$800 â€“ $1,000</td>
+                    <td>10 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="pendiente">
+                    <td>
+                      <div class="celda-principal">Docente de InglÃ©s</div>
+                      <div class="celda-secundaria">Colegio Nuevo Horizonte Â· Santa Tecla</div>
+                    </td>
+                    <td>$450 â€“ $600</td>
+                    <td>21 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-pendiente">Pendiente</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-carbon boton-pequeno" type="button" data-abrir-ventana="demostracion">Aprobar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="inactiva">
+                    <td>
+                      <div class="celda-principal">Asistente Administrativo (PasantÃ­a)</div>
+                      <div class="celda-secundaria">LogÃ­stica Izalco Â· San Salvador</div>
+                    </td>
+                    <td>$300 â€“ $350</td>
+                    <td>7 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-inactiva">â€“ Inactiva</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Reactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr data-tipo="activa">
+                    <td>
+                      <div class="celda-principal">Supervisor/a de Beneficio de CafÃ©</div>
+                      <div class="celda-secundaria">CafÃ© Apaneca Export Â· Apaneca</div>
+                    </td>
+                    <td>$600 â€“ $750</td>
+                    <td>12 oct 2026</td>
+                    <td>
+                      <span class="insignia insignia-correcta">âœ“ Activa</span>
+                    </td>
+                    <td>
+                      <div class="acciones">
+                        <button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Ver</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Editar</button
+                        ><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="demostracion">Desactivar</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="pie-sitio">
+      <div class="contenedor">
+        <div class="rejilla-pie">
+          <div>
+            <img src="assets/logo.png" alt="WorkConnect" />
+            <p class="atenuado pequeno" style="max-width: 300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p>
+          </div>
+          <div>
+            <h4>Candidatos</h4>
+            <ul>
+              <li><a href="resultados.html">Buscar empleo</a></li>
+              <li><a href="recursos.html">Recursos</a></li>
+              <li><a href="foros.html">Foros</a></li>
+              <li><a href="candidato.html">Mi perfil</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Empresas</h4>
+            <ul>
+              <li><a href="publicar-vacante.html">Publicar vacante</a></li>
+              <li><a href="postulaciones.html">Postulaciones</a></li>
+              <li><a href="empresas.html">Mi empresa</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Portal</h4>
+            <ul>
+              <li><a href="login.html">Ingresar</a></li>
+              <li><a href="admin-dashboard.html">AdministraciÃ³n</a></li>
+              <li><a href="index.html">Ãndice P01â€“P15</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="base-pie"><span>Â© 2026 WorkConnect Â· Conectando talento con oportunidades.</span><span>Proyecto universitario Â· Datos ficticios de El Salvador</span></div>
+      </div>
+    </footer>
+    <div class="fondo-ventana oculto" id="demostracion">
+      <section class="ventana" role="dialog" aria-modal="true" aria-labelledby="titulo-demostracion" tabindex="-1">
+        <div class="encabezado-ventana">
+          <h2 id="titulo-demostracion">AcciÃ³n de demostraciÃ³n</h2>
+          <button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">Ã—</button>
+        </div>
+        <div class="contenido-ventana">
+          <p>Las vacantes y sus estados son datos fijos y no se modifican.</p>
+        </div>
+        <div class="pie-ventana">
+          <button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button>
+        </div>
+      </section>
+    </div>
+    <script src="js/interacciones.js"></script>
+  </body>
 </html>

@@ -1,43 +1,338 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Foros · WorkConnect</title>
-<meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador.">
-<link rel="icon" type="image/png" href="assets/icono.png">
-<link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
-<a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
-<header class="cabecera-sitio"><div class="contenedor barra"><a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38"></a><nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal"><a href="resultados.html">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html" aria-current="page">Foros</a><a href="login.html?pestana=registro&amp;rol=empresa">Para empresas</a></nav><div class="acciones-cabecera"><button class="boton boton-contorno boton-pequeno boton-indice" id="boton-indice" type="button" aria-haspopup="dialog">P01–P15</button><a class="boton boton-contorno boton-pequeno" href="login.html?pestana=ingresar">Ingresar</a><a class="boton boton-principal boton-pequeno" href="login.html?pestana=registro">Registrarse</a><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button></div></div></header>
-<main id="contenido-principal">
-<div class="contenedor">
-<div class="encabezado-pagina"><span class="sobretitulo"><span class="pantalla">P05</span>Foros</span><h1>Foros de la comunidad</h1><p>Comparte dudas, experiencias y consejos con otras personas que buscan empleo.</p></div>
-<div class="distribucion-foro">
-  <aside><div class="lista-categorias"><button class="boton-categoria" type="button" data-categoria-foro="todas" aria-pressed="true"><span>Todas las categorías</span><span class="cantidad">6</span></button><button class="boton-categoria" type="button" data-categoria-foro="empleo" aria-pressed="false"><span>Búsqueda de empleo</span><span class="cantidad">2</span></button><button class="boton-categoria" type="button" data-categoria-foro="entrevistas" aria-pressed="false"><span>Entrevistas y CV</span><span class="cantidad">1</span></button><button class="boton-categoria" type="button" data-categoria-foro="salarios" aria-pressed="false"><span>Salarios y prestaciones</span><span class="cantidad">1</span></button><button class="boton-categoria" type="button" data-categoria-foro="carrera" aria-pressed="false"><span>Desarrollo profesional</span><span class="cantidad">1</span></button><button class="boton-categoria" type="button" data-categoria-foro="primer" aria-pressed="false"><span>Primer empleo</span><span class="cantidad">1</span></button></div></aside>
-  <section>
-    <div class="barra-resultados"><h2>Conversaciones</h2><button class="boton boton-principal" type="button" data-abrir-ventana="foro-acceso">Crear tema</button></div>
-    <div>
-      <article class="tema" data-categoria-tema="entrevistas"><div class="avatar">LC</div><div><h3><button type="button" data-abrir-ventana="tema-1">¿Cómo responder a «hábleme de usted» sin sonar ensayado?</button></h3><div class="datos-tema">Lorena Chávez · 18 oct 2026 · Entrevistas y CV · 2 respuestas</div></div></article>
-      <article class="tema" data-categoria-tema="salarios"><div class="avatar">KO</div><div><h3><button type="button" data-abrir-ventana="tema-2">Rangos salariales de desarrollo web en San Salvador 2026</button></h3><div class="datos-tema">Kevin Orellana · 16 oct 2026 · Salarios y prestaciones · 1 respuesta</div></div></article>
-      <article class="tema" data-categoria-tema="empleo"><div class="avatar">ME</div><div><h3><button type="button" data-abrir-ventana="tema-3">Ferias de empleo en el oriente del país</button></h3><div class="datos-tema">Mauricio Escobar · 15 oct 2026 · Búsqueda de empleo · 0 respuestas</div></div></article>
-      <article class="tema" data-categoria-tema="primer"><div class="avatar">FA</div><div><h3><button type="button" data-abrir-ventana="tema-4">Primer empleo sin experiencia: ¿por dónde empiezo?</button></h3><div class="datos-tema">Fátima Ayala · 13 oct 2026 · Primer empleo · 2 respuestas</div></div></article>
-      <article class="tema" data-categoria-tema="carrera"><div class="avatar">NV</div><div><h3><button type="button" data-abrir-ventana="tema-5">¿Vale la pena certificarse en gestión de proyectos?</button></h3><div class="datos-tema">Nancy Villalta · 11 oct 2026 · Desarrollo profesional · 0 respuestas</div></div></article>
-      <article class="tema" data-categoria-tema="empleo"><div class="avatar">AC</div><div><h3><button type="button" data-abrir-ventana="tema-6">Cuidado con ofertas que piden dinero por adelantado</button></h3><div class="datos-tema">Andrea Cañas · 9 oct 2026 · Búsqueda de empleo · 1 respuesta</div></div></article>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foros · WorkConnect</title>
+    <meta name="description" content="WorkConnect: conectando talento con oportunidades en El Salvador." />
+    <link rel="icon" type="image/png" href="assets/icono.png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <a class="enlace-saltar" href="#contenido-principal">Saltar al contenido</a>
+    <header class="cabecera-sitio">
+      <div class="contenedor barra">
+        <a class="marca" href="index.html"><img src="assets/logo.png" alt="WorkConnect — Conectando talento con oportunidades" width="214" height="38" /></a>
+        <nav class="navegacion-principal" id="navegacion-principal" aria-label="Principal">
+          <a href="resultados.html">Empleos</a><a href="recursos.html">Recursos</a><a href="foros.html" aria-current="page">Foros</a><a href="login.html?pestana=registro&amp;rol=empresa">Para empresas</a>
+        </nav>
+        <div class="acciones-cabecera">
+          <button class="boton boton-contorno boton-pequeno boton-indice" id="boton-indice" type="button" aria-haspopup="dialog">P01–P15</button><a class="boton boton-contorno boton-pequeno" href="login.html?pestana=ingresar">Ingresar</a
+          ><a class="boton boton-principal boton-pequeno" href="login.html?pestana=registro">Registrarse</a><button class="boton-menu" id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+    <main id="contenido-principal">
+      <div class="contenedor">
+        <div class="encabezado-pagina">
+          <span class="sobretitulo"><span class="pantalla">P05</span>Foros</span>
+          <h1>Foros de la comunidad</h1>
+          <p>Comparte dudas, experiencias y consejos con otras personas que buscan empleo.</p>
+        </div>
+        <div class="distribucion-foro">
+          <aside>
+            <div class="lista-categorias">
+              <button class="boton-categoria" type="button" data-categoria-foro="todas" aria-pressed="true"><span>Todas las categorías</span><span class="cantidad">6</span></button
+              ><button class="boton-categoria" type="button" data-categoria-foro="empleo" aria-pressed="false"><span>Búsqueda de empleo</span><span class="cantidad">2</span></button
+              ><button class="boton-categoria" type="button" data-categoria-foro="entrevistas" aria-pressed="false"><span>Entrevistas y CV</span><span class="cantidad">1</span></button
+              ><button class="boton-categoria" type="button" data-categoria-foro="salarios" aria-pressed="false"><span>Salarios y prestaciones</span><span class="cantidad">1</span></button
+              ><button class="boton-categoria" type="button" data-categoria-foro="carrera" aria-pressed="false"><span>Desarrollo profesional</span><span class="cantidad">1</span></button
+              ><button class="boton-categoria" type="button" data-categoria-foro="primer" aria-pressed="false"><span>Primer empleo</span><span class="cantidad">1</span></button>
+            </div>
+          </aside>
+          <section>
+            <div class="barra-resultados">
+              <h2>Conversaciones</h2>
+              <button class="boton boton-principal" type="button" data-abrir-ventana="foro-acceso">Crear tema</button>
+            </div>
+            <div>
+              <article class="tema" data-categoria-tema="entrevistas">
+                <div class="avatar">LC</div>
+                <div>
+                  <h3>
+                    <button type="button" data-abrir-ventana="tema-1">¿Cómo responder a «hábleme de usted» sin sonar ensayado?</button>
+                  </h3>
+                  <div class="datos-tema">Lorena Chávez · 18 oct 2026 · Entrevistas y CV · 2 respuestas</div>
+                </div>
+              </article>
+              <article class="tema" data-categoria-tema="salarios">
+                <div class="avatar">KO</div>
+                <div>
+                  <h3>
+                    <button type="button" data-abrir-ventana="tema-2">Rangos salariales de desarrollo web en San Salvador 2026</button>
+                  </h3>
+                  <div class="datos-tema">Kevin Orellana · 16 oct 2026 · Salarios y prestaciones · 1 respuesta</div>
+                </div>
+              </article>
+              <article class="tema" data-categoria-tema="empleo">
+                <div class="avatar">ME</div>
+                <div>
+                  <h3>
+                    <button type="button" data-abrir-ventana="tema-3">Ferias de empleo en el oriente del país</button>
+                  </h3>
+                  <div class="datos-tema">Mauricio Escobar · 15 oct 2026 · Búsqueda de empleo · 0 respuestas</div>
+                </div>
+              </article>
+              <article class="tema" data-categoria-tema="primer">
+                <div class="avatar">FA</div>
+                <div>
+                  <h3>
+                    <button type="button" data-abrir-ventana="tema-4">Primer empleo sin experiencia: ¿por dónde empiezo?</button>
+                  </h3>
+                  <div class="datos-tema">Fátima Ayala · 13 oct 2026 · Primer empleo · 2 respuestas</div>
+                </div>
+              </article>
+              <article class="tema" data-categoria-tema="carrera">
+                <div class="avatar">NV</div>
+                <div>
+                  <h3>
+                    <button type="button" data-abrir-ventana="tema-5">¿Vale la pena certificarse en gestión de proyectos?</button>
+                  </h3>
+                  <div class="datos-tema">Nancy Villalta · 11 oct 2026 · Desarrollo profesional · 0 respuestas</div>
+                </div>
+              </article>
+              <article class="tema" data-categoria-tema="empleo">
+                <div class="avatar">AC</div>
+                <div>
+                  <h3>
+                    <button type="button" data-abrir-ventana="tema-6">Cuidado con ofertas que piden dinero por adelantado</button>
+                  </h3>
+                  <div class="datos-tema">Andrea Cañas · 9 oct 2026 · Búsqueda de empleo · 1 respuesta</div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer class="pie-sitio">
+      <div class="contenedor">
+        <div class="rejilla-pie">
+          <div>
+            <img src="assets/logo.png" alt="WorkConnect" />
+            <p class="atenuado pequeno" style="max-width: 300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p>
+          </div>
+          <div>
+            <h4>Candidatos</h4>
+            <ul>
+              <li><a href="resultados.html">Buscar empleo</a></li>
+              <li><a href="recursos.html">Recursos</a></li>
+              <li><a href="foros.html">Foros</a></li>
+              <li><a href="candidato.html">Mi perfil</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Empresas</h4>
+            <ul>
+              <li><a href="publicar-vacante.html">Publicar vacante</a></li>
+              <li><a href="postulaciones.html">Postulaciones</a></li>
+              <li><a href="empresas.html">Mi empresa</a></li>
+              <li>
+                <a href="login.html?pestana=registro&amp;rol=empresa">Registrar empresa</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Portal</h4>
+            <ul>
+              <li><a href="login.html">Ingresar</a></li>
+              <li><a href="admin-dashboard.html">Administración</a></li>
+              <li><a href="index.html">Índice P01–P15</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div>
+      </div>
+    </footer>
+    <div class="fondo-ventana oculto" id="foro-acceso">
+      <section class="ventana" role="dialog" aria-modal="true" aria-labelledby="foro-acceso-titulo" tabindex="-1">
+        <div class="encabezado-ventana">
+          <h2 id="foro-acceso-titulo">Inicia sesión para continuar</h2>
+          <button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button>
+        </div>
+        <div class="contenido-ventana">
+          <p>Para crear un tema necesitas iniciar sesión.</p>
+        </div>
+        <div class="pie-ventana">
+          <a class="boton boton-contorno" href="login.html?pestana=registro">Crear cuenta</a><a class="boton boton-principal" href="login.html?pestana=ingresar">Iniciar sesión</a
+          ><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button>
+        </div>
+      </section>
     </div>
-  </section>
-</div>
-</div>
-</main>
-<footer class="pie-sitio"><div class="contenedor"><div class="rejilla-pie"><div><img src="assets/logo.png" alt="WorkConnect"><p class="atenuado pequeno" style="max-width:300px">Portal de empleo para El Salvador. Candidatos y empresas, en un mismo lugar.</p></div><div><h4>Candidatos</h4><ul><li><a href="resultados.html">Buscar empleo</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="foros.html">Foros</a></li><li><a href="candidato.html">Mi perfil</a></li></ul></div><div><h4>Empresas</h4><ul><li><a href="publicar-vacante.html">Publicar vacante</a></li><li><a href="postulaciones.html">Postulaciones</a></li><li><a href="empresas.html">Mi empresa</a></li><li><a href="login.html?pestana=registro&amp;rol=empresa">Registrar empresa</a></li></ul></div><div><h4>Portal</h4><ul><li><a href="login.html">Ingresar</a></li><li><a href="admin-dashboard.html">Administración</a></li><li><a href="index.html">Índice P01–P15</a></li></ul></div></div><div class="base-pie"><span>© 2026 WorkConnect · Conectando talento con oportunidades.</span><span>Proyecto universitario · Datos ficticios de El Salvador</span></div></div></footer>
-<div class="fondo-ventana oculto" id="foro-acceso"><section class="ventana" role="dialog" aria-modal="true" aria-labelledby="foro-acceso-titulo" tabindex="-1"><div class="encabezado-ventana"><h2 id="foro-acceso-titulo">Inicia sesión para continuar</h2><button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button></div><div class="contenido-ventana"><p>Para crear un tema necesitas iniciar sesión.</p></div><div class="pie-ventana"><a class="boton boton-contorno" href="login.html?pestana=registro">Crear cuenta</a><a class="boton boton-principal" href="login.html?pestana=ingresar">Iniciar sesión</a><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button></div></section></div>
-<div class="fondo-ventana oculto" id="tema-1"><section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-1-titulo" tabindex="-1"><div class="encabezado-ventana"><h2 id="tema-1-titulo">¿Cómo responder a «hábleme de usted» sin sonar ensayado?</h2><button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button></div><div class="contenido-ventana"><p class="datos-tema" style="margin:0 0 12px">Lorena Chávez · 18 oct 2026 · Entrevistas y CV</p><p>Tengo entrevista el jueves en una empresa de logística y siempre me trabo en esa pregunta. ¿Qué estructura usan ustedes?</p><h3 style="margin:24px 0 4px">2 respuesta(s)</h3><div class="respuesta"><div class="avatar">AP</div><div><strong>Ana Lucía Portillo</strong><p>Yo uso presente, pasado, futuro: qué hago hoy, qué he logrado y qué busco. Máximo dos minutos.</p></div></div><div class="respuesta"><div class="avatar">OA</div><div><strong>Óscar Amaya</strong><p>Prepara un logro con números. Por ejemplo, «reduje 15% el tiempo de despacho». Se recuerda más.</p></div></div><form class="respuesta-estatica" style="margin-top:12px;border-top:1px solid var(--arena);padding-top:18px"><div class="campo"><label for="respuesta-1">Tu respuesta</label><textarea id="respuesta-1" rows="3"></textarea></div><div class="flexible" style="margin-top:12px"><button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button></div></form></div><div class="pie-ventana"><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button></div></section></div>
-<div class="fondo-ventana oculto" id="tema-2"><section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-2-titulo" tabindex="-1"><div class="encabezado-ventana"><h2 id="tema-2-titulo">Rangos salariales de desarrollo web en San Salvador 2026</h2><button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button></div><div class="contenido-ventana"><p class="datos-tema" style="margin:0 0 12px">Kevin Orellana · 16 oct 2026 · Salarios y prestaciones</p><p>Estoy por recibir una oferta y quiero comparar. ¿Qué rangos ven para junior y semi senior en El Salvador?</p><h3 style="margin:24px 0 4px">1 respuesta(s)</h3><div class="respuesta"><div class="avatar">JA</div><div><strong>José Roberto Alvarenga</strong><p>Junior entre $600 y $900; semi senior entre $1,100 y $1,700 según la empresa y si es trabajo remoto para el extranjero.</p></div></div><form class="respuesta-estatica" style="margin-top:12px;border-top:1px solid var(--arena);padding-top:18px"><div class="campo"><label for="respuesta-2">Tu respuesta</label><textarea id="respuesta-2" rows="3"></textarea></div><div class="flexible" style="margin-top:12px"><button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button></div></form></div><div class="pie-ventana"><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button></div></section></div>
-<div class="fondo-ventana oculto" id="tema-3"><section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-3-titulo" tabindex="-1"><div class="encabezado-ventana"><h2 id="tema-3-titulo">Ferias de empleo en el oriente del país</h2><button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button></div><div class="contenido-ventana"><p class="datos-tema" style="margin:0 0 12px">Mauricio Escobar · 15 oct 2026 · Búsqueda de empleo</p><p>¿Alguien sabe si habrá feria de empleo en San Miguel antes de diciembre? Busco oportunidades en ventas.</p><h3 style="margin:24px 0 4px">0 respuesta(s)</h3><form class="respuesta-estatica" style="margin-top:12px;border-top:1px solid var(--arena);padding-top:18px"><div class="campo"><label for="respuesta-3">Tu respuesta</label><textarea id="respuesta-3" rows="3"></textarea></div><div class="flexible" style="margin-top:12px"><button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button></div></form></div><div class="pie-ventana"><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button></div></section></div>
-<div class="fondo-ventana oculto" id="tema-4"><section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-4-titulo" tabindex="-1"><div class="encabezado-ventana"><h2 id="tema-4-titulo">Primer empleo sin experiencia: ¿por dónde empiezo?</h2><button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button></div><div class="contenido-ventana"><p class="datos-tema" style="margin:0 0 12px">Fátima Ayala · 13 oct 2026 · Primer empleo</p><p>Me gradúo en diciembre de Administración de Empresas y no tengo experiencia formal. ¿Pasantías, voluntariados, qué recomiendan?</p><h3 style="margin:24px 0 4px">2 respuesta(s)</h3><div class="respuesta"><div class="avatar">BQ</div><div><strong>Beatriz Quintanilla</strong><p>Las pasantías con constancia de horas sociales cuentan como experiencia. Inclúyelas en tu CV con resultados concretos.</p></div></div><div class="respuesta"><div class="avatar">HR</div><div><strong>Henry Rosales</strong><p>Postúlate también a puestos de asistente; son una buena puerta de entrada.</p></div></div><form class="respuesta-estatica" style="margin-top:12px;border-top:1px solid var(--arena);padding-top:18px"><div class="campo"><label for="respuesta-4">Tu respuesta</label><textarea id="respuesta-4" rows="3"></textarea></div><div class="flexible" style="margin-top:12px"><button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button></div></form></div><div class="pie-ventana"><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button></div></section></div>
-<div class="fondo-ventana oculto" id="tema-5"><section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-5-titulo" tabindex="-1"><div class="encabezado-ventana"><h2 id="tema-5-titulo">¿Vale la pena certificarse en gestión de proyectos?</h2><button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button></div><div class="contenido-ventana"><p class="datos-tema" style="margin:0 0 12px">Nancy Villalta · 11 oct 2026 · Desarrollo profesional</p><p>Estoy valorando certificaciones de gestión de proyectos. ¿Les han servido para crecer en empresas locales?</p><h3 style="margin:24px 0 4px">0 respuesta(s)</h3><form class="respuesta-estatica" style="margin-top:12px;border-top:1px solid var(--arena);padding-top:18px"><div class="campo"><label for="respuesta-5">Tu respuesta</label><textarea id="respuesta-5" rows="3"></textarea></div><div class="flexible" style="margin-top:12px"><button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button></div></form></div><div class="pie-ventana"><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button></div></section></div>
-<div class="fondo-ventana oculto" id="tema-6"><section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-6-titulo" tabindex="-1"><div class="encabezado-ventana"><h2 id="tema-6-titulo">Cuidado con ofertas que piden dinero por adelantado</h2><button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button></div><div class="contenido-ventana"><p class="datos-tema" style="margin:0 0 12px">Andrea Cañas · 9 oct 2026 · Búsqueda de empleo</p><p>Me contactaron por mensajería ofreciendo trabajo y pedían $30 para «uniforme». Les comparto para que estén alertas.</p><h3 style="margin:24px 0 4px">1 respuesta(s)</h3><div class="respuesta"><div class="avatar">LP</div><div><strong>Luis Ernesto Peña</strong><p>Una empresa seria no cobra por contratar. Gracias por compartir.</p></div></div><form class="respuesta-estatica" style="margin-top:12px;border-top:1px solid var(--arena);padding-top:18px"><div class="campo"><label for="respuesta-6">Tu respuesta</label><textarea id="respuesta-6" rows="3"></textarea></div><div class="flexible" style="margin-top:12px"><button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button></div></form></div><div class="pie-ventana"><button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button></div></section></div>
-<script src="js/interacciones.js"></script>
-</body>
+    <div class="fondo-ventana oculto" id="tema-1">
+      <section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-1-titulo" tabindex="-1">
+        <div class="encabezado-ventana">
+          <h2 id="tema-1-titulo">¿Cómo responder a «hábleme de usted» sin sonar ensayado?</h2>
+          <button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button>
+        </div>
+        <div class="contenido-ventana">
+          <p class="datos-tema" style="margin: 0 0 12px">Lorena Chávez · 18 oct 2026 · Entrevistas y CV</p>
+          <p>Tengo entrevista el jueves en una empresa de logística y siempre me trabo en esa pregunta. ¿Qué estructura usan ustedes?</p>
+          <h3 style="margin: 24px 0 4px">2 respuesta(s)</h3>
+          <div class="respuesta">
+            <div class="avatar">AP</div>
+            <div>
+              <strong>Ana Lucía Portillo</strong>
+              <p>Yo uso presente, pasado, futuro: qué hago hoy, qué he logrado y qué busco. Máximo dos minutos.</p>
+            </div>
+          </div>
+          <div class="respuesta">
+            <div class="avatar">OA</div>
+            <div>
+              <strong>Óscar Amaya</strong>
+              <p>Prepara un logro con números. Por ejemplo, «reduje 15% el tiempo de despacho». Se recuerda más.</p>
+            </div>
+          </div>
+          <form class="respuesta-estatica" style="margin-top: 12px; border-top: 1px solid var(--arena); padding-top: 18px">
+            <div class="campo"><label for="respuesta-1">Tu respuesta</label><textarea id="respuesta-1" rows="3"></textarea></div>
+            <div class="flexible" style="margin-top: 12px">
+              <button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button>
+            </div>
+          </form>
+        </div>
+        <div class="pie-ventana">
+          <button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button>
+        </div>
+      </section>
+    </div>
+    <div class="fondo-ventana oculto" id="tema-2">
+      <section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-2-titulo" tabindex="-1">
+        <div class="encabezado-ventana">
+          <h2 id="tema-2-titulo">Rangos salariales de desarrollo web en San Salvador 2026</h2>
+          <button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button>
+        </div>
+        <div class="contenido-ventana">
+          <p class="datos-tema" style="margin: 0 0 12px">Kevin Orellana · 16 oct 2026 · Salarios y prestaciones</p>
+          <p>Estoy por recibir una oferta y quiero comparar. ¿Qué rangos ven para junior y semi senior en El Salvador?</p>
+          <h3 style="margin: 24px 0 4px">1 respuesta(s)</h3>
+          <div class="respuesta">
+            <div class="avatar">JA</div>
+            <div>
+              <strong>José Roberto Alvarenga</strong>
+              <p>Junior entre $600 y $900; semi senior entre $1,100 y $1,700 según la empresa y si es trabajo remoto para el extranjero.</p>
+            </div>
+          </div>
+          <form class="respuesta-estatica" style="margin-top: 12px; border-top: 1px solid var(--arena); padding-top: 18px">
+            <div class="campo"><label for="respuesta-2">Tu respuesta</label><textarea id="respuesta-2" rows="3"></textarea></div>
+            <div class="flexible" style="margin-top: 12px">
+              <button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button>
+            </div>
+          </form>
+        </div>
+        <div class="pie-ventana">
+          <button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button>
+        </div>
+      </section>
+    </div>
+    <div class="fondo-ventana oculto" id="tema-3">
+      <section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-3-titulo" tabindex="-1">
+        <div class="encabezado-ventana">
+          <h2 id="tema-3-titulo">Ferias de empleo en el oriente del país</h2>
+          <button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button>
+        </div>
+        <div class="contenido-ventana">
+          <p class="datos-tema" style="margin: 0 0 12px">Mauricio Escobar · 15 oct 2026 · Búsqueda de empleo</p>
+          <p>¿Alguien sabe si habrá feria de empleo en San Miguel antes de diciembre? Busco oportunidades en ventas.</p>
+          <h3 style="margin: 24px 0 4px">0 respuesta(s)</h3>
+          <form class="respuesta-estatica" style="margin-top: 12px; border-top: 1px solid var(--arena); padding-top: 18px">
+            <div class="campo"><label for="respuesta-3">Tu respuesta</label><textarea id="respuesta-3" rows="3"></textarea></div>
+            <div class="flexible" style="margin-top: 12px">
+              <button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button>
+            </div>
+          </form>
+        </div>
+        <div class="pie-ventana">
+          <button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button>
+        </div>
+      </section>
+    </div>
+    <div class="fondo-ventana oculto" id="tema-4">
+      <section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-4-titulo" tabindex="-1">
+        <div class="encabezado-ventana">
+          <h2 id="tema-4-titulo">Primer empleo sin experiencia: ¿por dónde empiezo?</h2>
+          <button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button>
+        </div>
+        <div class="contenido-ventana">
+          <p class="datos-tema" style="margin: 0 0 12px">Fátima Ayala · 13 oct 2026 · Primer empleo</p>
+          <p>Me gradúo en diciembre de Administración de Empresas y no tengo experiencia formal. ¿Pasantías, voluntariados, qué recomiendan?</p>
+          <h3 style="margin: 24px 0 4px">2 respuesta(s)</h3>
+          <div class="respuesta">
+            <div class="avatar">BQ</div>
+            <div>
+              <strong>Beatriz Quintanilla</strong>
+              <p>Las pasantías con constancia de horas sociales cuentan como experiencia. Inclúyelas en tu CV con resultados concretos.</p>
+            </div>
+          </div>
+          <div class="respuesta">
+            <div class="avatar">HR</div>
+            <div>
+              <strong>Henry Rosales</strong>
+              <p>Postúlate también a puestos de asistente; son una buena puerta de entrada.</p>
+            </div>
+          </div>
+          <form class="respuesta-estatica" style="margin-top: 12px; border-top: 1px solid var(--arena); padding-top: 18px">
+            <div class="campo"><label for="respuesta-4">Tu respuesta</label><textarea id="respuesta-4" rows="3"></textarea></div>
+            <div class="flexible" style="margin-top: 12px">
+              <button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button>
+            </div>
+          </form>
+        </div>
+        <div class="pie-ventana">
+          <button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button>
+        </div>
+      </section>
+    </div>
+    <div class="fondo-ventana oculto" id="tema-5">
+      <section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-5-titulo" tabindex="-1">
+        <div class="encabezado-ventana">
+          <h2 id="tema-5-titulo">¿Vale la pena certificarse en gestión de proyectos?</h2>
+          <button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button>
+        </div>
+        <div class="contenido-ventana">
+          <p class="datos-tema" style="margin: 0 0 12px">Nancy Villalta · 11 oct 2026 · Desarrollo profesional</p>
+          <p>Estoy valorando certificaciones de gestión de proyectos. ¿Les han servido para crecer en empresas locales?</p>
+          <h3 style="margin: 24px 0 4px">0 respuesta(s)</h3>
+          <form class="respuesta-estatica" style="margin-top: 12px; border-top: 1px solid var(--arena); padding-top: 18px">
+            <div class="campo"><label for="respuesta-5">Tu respuesta</label><textarea id="respuesta-5" rows="3"></textarea></div>
+            <div class="flexible" style="margin-top: 12px">
+              <button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button>
+            </div>
+          </form>
+        </div>
+        <div class="pie-ventana">
+          <button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button>
+        </div>
+      </section>
+    </div>
+    <div class="fondo-ventana oculto" id="tema-6">
+      <section class="ventana grande" role="dialog" aria-modal="true" aria-labelledby="tema-6-titulo" tabindex="-1">
+        <div class="encabezado-ventana">
+          <h2 id="tema-6-titulo">Cuidado con ofertas que piden dinero por adelantado</h2>
+          <button class="cerrar-ventana" type="button" data-cerrar-modal aria-label="Cerrar">×</button>
+        </div>
+        <div class="contenido-ventana">
+          <p class="datos-tema" style="margin: 0 0 12px">Andrea Cañas · 9 oct 2026 · Búsqueda de empleo</p>
+          <p>Me contactaron por mensajería ofreciendo trabajo y pedían $30 para «uniforme». Les comparto para que estén alertas.</p>
+          <h3 style="margin: 24px 0 4px">1 respuesta(s)</h3>
+          <div class="respuesta">
+            <div class="avatar">LP</div>
+            <div>
+              <strong>Luis Ernesto Peña</strong>
+              <p>Una empresa seria no cobra por contratar. Gracias por compartir.</p>
+            </div>
+          </div>
+          <form class="respuesta-estatica" style="margin-top: 12px; border-top: 1px solid var(--arena); padding-top: 18px">
+            <div class="campo"><label for="respuesta-6">Tu respuesta</label><textarea id="respuesta-6" rows="3"></textarea></div>
+            <div class="flexible" style="margin-top: 12px">
+              <button class="boton boton-principal boton-pequeno" type="submit">Responder</button><button class="boton boton-contorno boton-pequeno" type="button" data-abrir-ventana="foro-acceso">Reportar tema</button>
+            </div>
+          </form>
+        </div>
+        <div class="pie-ventana">
+          <button class="boton boton-carbon" type="button" data-cerrar-modal>Cerrar</button>
+        </div>
+      </section>
+    </div>
+    <script src="js/interacciones.js"></script>
+  </body>
 </html>
