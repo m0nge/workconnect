@@ -1,107 +1,118 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
-  var botonMenu = document.getElementById("boton-menu");
-  var menuPrincipal = document.getElementById("navegacion-principal");
-  if (botonMenu && menuPrincipal) {
-    botonMenu.addEventListener("click", function () {
-      var abierto = menuPrincipal.classList.toggle("abierto");
-      botonMenu.setAttribute("aria-expanded", abierto);
+  function alHacerClick(selector, accion) {
+    document.querySelectorAll(selector).forEach(function (elemento) {
+      elemento.addEventListener("click", function (evento) { accion(elemento, evento); });
+    });
+  }
+  function marcarActivo(selector, atributo, activo) {
+    document.querySelectorAll(selector).forEach(function (elemento) {
+      elemento.setAttribute(atributo, elemento === activo);
     });
   }
 
-  var panelAvanzado = document.getElementById("panel-avanzado");
-  var botonAvanzado = document.getElementById("alternador-avanzado");
-  if (panelAvanzado && botonAvanzado) {
-    botonAvanzado.addEventListener("click", function () {
-      var visible = panelAvanzado.hidden;
-      panelAvanzado.hidden = !visible;
-      botonAvanzado.setAttribute("aria-expanded", visible);
-      botonAvanzado.textContent = visible ? "Ocultar filtros avanzados" : "Mostrar filtros avanzados";
-    });
-  }
-
-  document.querySelectorAll('[role="tab"][data-categoria]').forEach(function (pestana) {
-    pestana.addEventListener("click", function () {
-      var categoria = pestana.dataset.categoria;
-      document.querySelectorAll('[role="tab"][data-categoria]').forEach(function (otraPestana) {
-        otraPestana.setAttribute("aria-selected", otraPestana === pestana);
-      });
-      document.querySelectorAll("[data-tipo]").forEach(function (elemento) {
-        elemento.classList.toggle("oculto", categoria !== "todos" && elemento.dataset.tipo !== categoria);
-      });
-    });
+  var botonMenu = document.getElementById("boton-menu"), menu = document.getElementById("navegacion-principal");
+  if (botonMenu && menu) botonMenu.addEventListener("click", function () {
+    botonMenu.setAttribute("aria-expanded", menu.classList.toggle("abierto"));
   });
 
-  document.querySelectorAll("[data-categoria-foro]").forEach(function (botonCategoria) {
-    botonCategoria.addEventListener("click", function () {
-      var categoria = botonCategoria.dataset.categoriaForo;
-      document.querySelectorAll("[data-categoria-foro]").forEach(function (otroBoton) {
-        otroBoton.setAttribute("aria-pressed", otroBoton === botonCategoria);
-      });
-      document.querySelectorAll("[data-categoria-tema]").forEach(function (tema) {
-        tema.classList.toggle("oculto", categoria !== "todas" && tema.dataset.categoriaTema !== categoria);
-      });
+  var panelAvanzado = document.getElementById("panel-avanzado"), alternadorAvanzado = document.getElementById("alternador-avanzado");
+  if (panelAvanzado && alternadorAvanzado) alternadorAvanzado.addEventListener("click", function () {
+    panelAvanzado.hidden = !panelAvanzado.hidden;
+    alternadorAvanzado.setAttribute("aria-expanded", !panelAvanzado.hidden);
+    alternadorAvanzado.textContent = panelAvanzado.hidden ? "Mostrar filtros avanzados" : "Ocultar filtros avanzados";
+  });
+  alHacerClick('[role="tab"][data-categoria]', function (pestana) {
+    var categoria = pestana.dataset.categoria;
+    marcarActivo('[role="tab"][data-categoria]', "aria-selected", pestana);
+    document.querySelectorAll("[data-tipo]").forEach(function (elemento) {
+      elemento.classList.toggle("oculto", categoria !== "todos" && elemento.dataset.tipo !== categoria);
     });
   });
-
-  var ventanaIndice = document.getElementById("ventana-indice");
+  alHacerClick("[data-categoria-foro]", function (boton) {
+    var categoria = boton.dataset.categoriaForo;
+    marcarActivo("[data-categoria-foro]", "aria-pressed", boton);
+    document.querySelectorAll("[data-categoria-tema]").forEach(function (tema) {
+      tema.classList.toggle("oculto", categoria !== "todas" && tema.dataset.categoriaTema !== categoria);
+    });
+  });
   var ventanas = document.querySelectorAll(".fondo-ventana");
-  function abrirVentana(elemento) {
-    elemento.classList.remove("oculto");
+  function abrirVentana(ventana) {
+    ventana.classList.remove("oculto");
     document.body.style.overflow = "hidden";
-    elemento.querySelector(".ventana").focus();
+    ventana.querySelector(".ventana").focus();
   }
-  function cerrarVentana(elemento) {
-    elemento.classList.add("oculto");
-    if (document.querySelectorAll(".fondo-ventana:not(.oculto)").length === 0) document.body.style.overflow = "";
+  function cerrarVentana(ventana) {
+    ventana.classList.add("oculto");
+    if (!document.querySelector(".fondo-ventana:not(.oculto)")) document.body.style.overflow = "";
   }
-  document.querySelectorAll("[data-abrir-ventana]").forEach(function (boton) {
-    boton.addEventListener("click", function () {
-      var elemento = document.getElementById(boton.dataset.abrirVentana);
-      if (elemento) abrirVentana(elemento);
+  alHacerClick("[data-abrir-ventana]", function (boton) {
+    var ventana = document.getElementById(boton.dataset.abrirVentana);
+    if (ventana) abrirVentana(ventana);
+  });
+  var ventanaIndice = document.getElementById("ventana-indice");
+  if (ventanaIndice) ["boton-indice", "boton-pie-indice"].forEach(function (id) {
+    var boton = document.getElementById(id);
+    if (boton) boton.addEventListener("click", function () { abrirVentana(ventanaIndice); });
+  });
+  ventanas.forEach(function (ventana) {
+    ventana.querySelectorAll("[data-cerrar-modal]").forEach(function (boton) {
+      boton.addEventListener("click", function () { cerrarVentana(ventana); });
+    });
+    ventana.addEventListener("mousedown", function (evento) {
+      if (evento.target === ventana) cerrarVentana(ventana);
     });
   });
-  if (ventanaIndice) {
-    ["boton-indice", "boton-pie-indice"].forEach(function (identificador) {
-      var boton = document.getElementById(identificador);
-      if (boton) boton.addEventListener("click", function () { abrirVentana(ventanaIndice); });
-    });
-  }
-  ventanas.forEach(function (elemento) {
-    elemento.querySelectorAll("[data-cerrar-modal]").forEach(function (boton) {
-      boton.addEventListener("click", function () { cerrarVentana(elemento); });
-    });
-    elemento.addEventListener("mousedown", function (evento) {
-      if (evento.target === elemento) cerrarVentana(elemento);
+  document.addEventListener("keydown", function (evento) {
+    if (evento.key === "Escape") ventanas.forEach(function (ventana) {
+      if (!ventana.classList.contains("oculto")) cerrarVentana(ventana);
     });
   });
-
-  document.querySelectorAll(".respuesta-estatica, .acceso-estatico, .formulario-estatico").forEach(function (formulario) {
+  document.querySelectorAll(".respuesta-estatica, .acceso-estatico:not(#formulario-acceso), .formulario-estatico").forEach(function (formulario) {
     formulario.addEventListener("submit", function (evento) { evento.preventDefault(); });
   });
-  document.querySelectorAll("[data-pestana-formulario]").forEach(function (botonPestana) {
-    botonPestana.addEventListener("click", function () {
-      var nombrePanel = botonPestana.dataset.pestanaFormulario;
-      document.querySelectorAll('[role="tab"][data-pestana-formulario]').forEach(function (otraPestana) {
-        otraPestana.setAttribute("aria-selected", otraPestana === botonPestana);
-      });
-      document.querySelectorAll("[data-panel-formulario]").forEach(function (panel) {
-        panel.hidden = panel.dataset.panelFormulario !== nombrePanel;
-      });
+  var formularioAcceso = document.getElementById("formulario-acceso");
+  if (formularioAcceso) {
+    var cuentasDemo = [
+      { rol: "candidato", correo: "candidato@workconnect.sv", clave: "Demo1234", destino: "candidato.html" },
+      { rol: "empresa", correo: "empresa@workconnect.sv", clave: "Demo1234", destino: "empresas.html" },
+      { rol: "administrador", correo: "admin@workconnect.sv", clave: "Admin1234", destino: "admin-dashboard.html" }
+    ];
+    var correoAcceso = document.getElementById("correo-acceso"), claveAcceso = document.getElementById("clave-acceso"), mensajeAcceso = document.getElementById("mensaje-acceso");
+    formularioAcceso.addEventListener("submit", function (evento) {
+      evento.preventDefault();
+      var correo = correoAcceso.value.trim().toLowerCase();
+      var cuenta = cuentasDemo.find(function (item) { return item.correo === correo && item.clave === claveAcceso.value; });
+      if (!cuenta) {
+        mensajeAcceso.textContent = "El correo o la contraseña no son correctos. Usa una cuenta de demostración válida.";
+        return;
+      }
+      window.location.href = cuenta.destino;
+    });
+    alHacerClick("[data-acceso-demo]", function (boton) {
+      var cuenta = cuentasDemo.find(function (item) { return item.rol === boton.dataset.accesoDemo; });
+      if (!cuenta) return;
+      var pestanaIngresar = document.querySelector('[data-pestana-formulario="ingresar"]');
+      if (pestanaIngresar) pestanaIngresar.click();
+      correoAcceso.value = cuenta.correo; claveAcceso.value = cuenta.clave; mensajeAcceso.textContent = "";
+      formularioAcceso.requestSubmit();
+    });
+  }
+  alHacerClick("[data-pestana-formulario]", function (boton) {
+    var nombrePanel = boton.dataset.pestanaFormulario;
+    marcarActivo('[role="tab"][data-pestana-formulario]', "aria-selected", boton);
+    document.querySelectorAll("[data-panel-formulario]").forEach(function (panel) {
+      panel.hidden = panel.dataset.panelFormulario !== nombrePanel;
     });
   });
-  document.querySelectorAll("[data-rol]").forEach(function (botonRol) {
-    botonRol.addEventListener("click", function () {
-      var esEmpresa = botonRol.dataset.rol === "empresa";
-      document.querySelectorAll("[data-rol]").forEach(function (otroBoton) {
-        otroBoton.setAttribute("aria-pressed", otroBoton === botonRol);
-      });
-      var camposEmpresa = document.querySelector(".campo-empresa");
-      var etiquetaNombre = document.querySelector('label[for="nombre-registro"]');
-      if (camposEmpresa) camposEmpresa.classList.toggle("oculto", !esEmpresa);
-      if (etiquetaNombre) etiquetaNombre.textContent = esEmpresa ? "Nombre de la empresa" : "Nombre completo";
-    });
+  alHacerClick("[data-rol]", function (boton) {
+    var esEmpresa = boton.dataset.rol === "empresa";
+    marcarActivo("[data-rol]", "aria-pressed", boton);
+    var camposEmpresa = document.querySelector(".campo-empresa");
+    var etiquetaNombre = document.querySelector('label[for="nombre-registro"]');
+    if (camposEmpresa) camposEmpresa.classList.toggle("oculto", !esEmpresa);
+    if (etiquetaNombre) etiquetaNombre.textContent = esEmpresa ? "Nombre de la empresa" : "Nombre completo";
   });
   var parametros = new URLSearchParams(window.location.search);
   var panelInicial = parametros.get("pestana") === "registro" ? "registro" : "ingresar";
@@ -111,9 +122,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   var pestanaInicial = document.querySelector('[role="tab"][data-pestana-formulario="' + panelInicial + '"]');
   if (pestanaInicial) pestanaInicial.click();
-  document.addEventListener("keydown", function (evento) {
-    if (evento.key === "Escape") ventanas.forEach(function (elemento) {
-      if (!elemento.classList.contains("oculto")) cerrarVentana(elemento);
-    });
-  });
 });

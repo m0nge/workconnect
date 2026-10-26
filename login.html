@@ -32,7 +32,7 @@
           </div>
           <div class="caja-demostracion">
             <h3>Acceso de demostración</h3>
-            <span class="boton boton-pequeno">Candidato</span><span class="boton boton-pequeno">Empresa</span><span class="boton boton-pequeno">Administrador</span>
+            <button class="boton boton-pequeno" type="button" data-acceso-demo="candidato">Candidato</button><button class="boton boton-pequeno" type="button" data-acceso-demo="empresa">Empresa</button><button class="boton boton-pequeno" type="button" data-acceso-demo="administrador">Administrador</button>
             <p style="font-size: 0.8rem; margin-top: 6px">
               <code>candidato@workconnect.sv</code> · <code>Demo1234</code><br /><code>empresa@workconnect.sv</code> · <code>Demo1234</code><br /><code>admin@workconnect.sv</code> · <code>Admin1234</code>
             </p>
@@ -45,9 +45,10 @@
               ><button class="pestana" role="tab" data-pestana-formulario="registro" aria-selected="false">Crear cuenta</button>
             </div>
             <section id="panel-ingresar" data-panel-formulario="ingresar">
-              <form class="columna acceso-estatico">
-                <div class="campo"><label for="correo-acceso">Correo electrónico</label><input id="correo-acceso" type="email" autocomplete="username" placeholder="nombre@correo.com" /></div>
-                <div class="campo"><label for="clave-acceso">Contraseña</label><input id="clave-acceso" type="password" autocomplete="current-password" /></div>
+              <form id="formulario-acceso" class="columna acceso-estatico">
+                <div class="campo"><label for="correo-acceso">Correo electrónico</label><input id="correo-acceso" type="email" autocomplete="username" placeholder="nombre@correo.com" required /></div>
+                <div class="campo"><label for="clave-acceso">Contraseña</label><input id="clave-acceso" type="password" autocomplete="current-password" required /></div>
+                <div id="mensaje-acceso" class="alerta-formulario" role="alert" aria-live="polite"></div>
                 <button class="boton boton-principal boton-ancho" type="submit">Iniciar sesión</button>
                 <p class="pequeno atenuado">
                   ¿Aún no tienes cuenta?
